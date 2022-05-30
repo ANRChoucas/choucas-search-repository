@@ -1,0 +1,2338 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#"
+     xml:base="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25">
+        <rdfs:comment>To perform our experimentation in the context of the Choucas project (http://choucas.ign.fr/) and with the objective of proposing an approach to Geospatial Web Service (GWS) discovery through semantic annotation of Web Processing service (WPS) service descriptions, we have designed a test data ontology in order to annotate semantically the Inputs/outputs of a services. Service ontology represents the main categories of geospatial services and their relationships.  The data ontology categorises the I/O data types of geospatial services and their relationships.  To design the test data ontology, we have analysed the I/O of WPS services selected in our corpus to create relative concepts that can be used to semantically describe these I/O. We also referred to and drew inspiration from a set of works in the literature that define a vocabulary that can be used to semantically describe the I/O of these services. In particular, we are interested in the work of the Choucas project which defines and specialises a vocabulary based on the TEI description Language (http://www.tei-c.org/), as well as other work of (http://protegewiki.stanford.edu/wiki/Protege_Ontology_Library) that provide an ontological formalism of the Geography Markup Language (GML) format.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#AccumulationFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#AccumulationFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HydrologyAnalysis"/>
+        <rdfs:comment>For example a raster of accumulated flow to each cell.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Adjacency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Adjacency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TopologicalCategory"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Inclusion"/>
+        <rdfs:comment>Example: Near, Next...</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Adjective -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Adjective">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Postagg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Adress -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Adress">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnnotation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Adverb -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Adverb">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Postagg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Aggregate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Aggregate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Generalization"/>
+        <rdfs:comment>A reduced resolution version of a raster.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ArgumentRaster -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ArgumentRaster">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RasterCreation"/>
+        <rdfs:comment>Concept for argument of certain processes. For example, a input that can be a raster or a constant value.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Article -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Article">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Postagg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Aspect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Aspect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SurfaceAnalysis"/>
+        <rdfs:comment>Represents derived aspect from a surface. Aspect identifies the downslope direction of the maximum rate of change in value from each cell to its neighbors. Aspect can be thought of as the slope direction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#AttributesSettings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#AttributesSettings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtactionSettings"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#BalanceVolume -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#BalanceVolume">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GroundwaterAnalysis"/>
+        <rdfs:comment>Represents the groundwater volume balance residual for steady flow in an aquifer, as determined by Darcy&apos;s Law.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#BandCollectionStatistics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#BandCollectionStatistics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Multivariate"/>
+        <rdfs:comment>Represents the statistics for a set of raster bands.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#BarrierFeatures -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#BarrierFeatures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialSettingsConfiguration"/>
+        <rdfs:comment>For example, the barrier features to constrain the interpolation. or barrier features for other functions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#BaseContour -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#BaseContour">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ContourValue"/>
+        <rdfs:comment>Base contour value. Contours are generated above and below the base value.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#BoundaryClean -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#BoundaryClean">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Generalization"/>
+        <rdfs:comment>Represents a smoothed boundary between zones after expanding and shrinking it.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CellSize -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CellSize">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RasterSettings"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CellsAnalysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CellsAnalysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CellsExtracted -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CellsExtracted">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CellsAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CellsNumber -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CellsNumber">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RasterSettings"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CenterCoordinate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CenterCoordinate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionArea"/>
+        <rdfs:comment>Center coordinate (x,y) of circle defining the area to be extracted..</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CircleRadius -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CircleRadius">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CircleSettings"/>
+        <rdfs:comment>Radius of circle defining the area to be extracted. .</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CircleSettings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CircleSettings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtactionSettings"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ClassData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ClassData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalSettings"/>
+        <rdfs:comment>For example a dataset that defines the classes. For example a classes that will have their area summarized. The class input for example can be an integer raster layer or a feature layer.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ClassField -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ClassField">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalSettings"/>
+        <rdfs:comment>For example the field that holds the class values. It can be an integer or a string field of the in_class_data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CombinedRasters -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CombinedRasters">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LocalCalculation"/>
+        <rdfs:comment>Represents multiple rasters so a unique output value is assigned to each unique combination of input values.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CompositeCurve -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CompositeCurve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Curve"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CompositeSolid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CompositeSolid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Solid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CompositeSurface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CompositeSurface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ConcentrationDistribution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ConcentrationDistribution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GroundwaterAnalysis"/>
+        <rdfs:comment>Represents the concentration distribution.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Conjunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Conjunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Postagg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Constant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Constant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ArgumentRaster"/>
+        <rdfs:comment>Constant value will be converted as Raster</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ConstantRaster -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ConstantRaster">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#NeutralRaster"/>
+        <rdfs:comment>Represent a constant raster of a constant value within the Analysis Window.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Contour -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Contour">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SurfaceAnalysis"/>
+        <rdfs:comment>contour or isoline from a raster surface.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ContourInterval -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ContourInterval">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ContourValue"/>
+        <rdfs:comment>Interval of contours. This can be any positive number.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ContourList -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ContourList">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Contour"/>
+        <rdfs:comment>contours or isolines from a raster surface</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ContourValue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ContourValue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SurfaceSettings"/>
+        <rdfs:comment>The base contour, contour interval, indexed contour interval and explicit contour values that can also be specified via a text file
+or List of z-values for which to create contours.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ContourWithBarriers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ContourWithBarriers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Contour"/>
+        <rdfs:comment>Contours from a raster surface. The inclusion of barrier features will allow one to independently generate contours on either side of a barrier.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Corridor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Corridor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Distance"/>
+        <rdfs:comment>Represents the sum of two accumulative costs.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CostAllocation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CostAllocation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DistanceElement"/>
+        <rdfs:comment>Identifies the zone of each source location (cell or feature) that could be reached with the least accumulative cost.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CostBackLink -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CostBackLink">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DistanceElement"/>
+        <rdfs:comment>Represents the neighbor that is the next cell on the least accumulative cost path to the nearest source.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CostDistance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CostDistance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Distance"/>
+        <rdfs:comment>Represents the least accumulative cost distance for each cell to the nearest source over a cost surface.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CostPath -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CostPath">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DistanceElement"/>
+        <rdfs:comment>Represents the least-cost path from a source to a destination</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Curvature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Curvature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SurfaceAnalysis"/>
+        <rdfs:comment>Represents the curvature of a raster surface can including profile and plan curvature.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Curve -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Curve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeometricPrimitive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DarcyVelocity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DarcyVelocity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GroundwaterAnalysis"/>
+        <rdfs:comment>Represents the groundwater seepage velocity vector (direction and magnitude) for steady flow in an aquifer</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Dendrogram -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Dendrogram">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Multivariate"/>
+        <rdfs:comment>Dendrogram.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DensityAnalysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DensityAnalysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DensitySettings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DensitySettings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DensityAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DestinationLocation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DestinationLocation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Distance_configuration"/>
+        <rdfs:comment>Raster or feature dataset that identifies those cells from which the least-cost path is determined to the least costly source.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Determinant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Determinant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Postagg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Determiner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Determiner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Postagg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Diagnostic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Diagnostic">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ParameterSummary"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#InterpolationSettings"/>
+        <rdfs:comment>The  diagnostic  represents all inputs and parameters.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DirectionFinal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DirectionFinal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DirectionalCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DirectionInitial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DirectionInitial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DirectionalCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DirectionVelocity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DirectionVelocity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DarcyVelocity"/>
+        <rdfs:comment>Represents the direction of the seepage velocity vector (average linear velocity) at the center of the cell, calculated as the average value of the seepage velocity through the four faces of the cell. It is used with the magnitude velocity  to describe the flow vector</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DirectionalCategory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DirectionalCategory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Offset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Distance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Distance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DistanceAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DistanceAnalysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DistanceAnalysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DistanceCategory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DistanceCategory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Offset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DistanceElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DistanceElement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DistanceAnalysis"/>
+        <rdfs:comment>Presents elements identified according to a distance</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Distance_configuration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Distance_configuration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DistanceAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DrainageBasin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DrainageBasin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HydrologyAnalysis"/>
+        <rdfs:comment>Delineation of the drainage basin.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Drop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Drop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HydrologySettings"/>
+        <rdfs:comment>For example a drop raster. The drop raster shows the ratio of the maximum change in elevation from each.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#EqualFrequency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#EqualFrequency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Frequency"/>
+        <rdfs:comment>Represents the number of times a set of rasters is equal to another raster on a cell-by-cell basis.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#EuclideanAllocation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#EuclideanAllocation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DistanceElement"/>
+        <rdfs:comment>Represents, the nearest source based on Euclidean distance</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#EuclideanDirection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#EuclideanDirection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DistanceElement"/>
+        <rdfs:comment>Respresents for each cell, the direction, in degrees, to the nearest source.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#EuclideanDistance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#EuclideanDistance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Distance"/>
+        <rdfs:comment>Represents for each cell, the Euclidean distance to the closest source.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExpandedZone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExpandedZone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Generalization"/>
+        <rdfs:comment>Expanded specified zone of a raster by a specified number of cells</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExplicitContour -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExplicitContour">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ContourValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtactionSettings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtactionSettings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CellsAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionArea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionArea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtactionSettings"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionByAttributes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionByAttributes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CellsExtracted"/>
+        <rdfs:comment>Represents extractsed cell(s), for a raster based on a logical query.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionByCircle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionByCircle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CellsExtracted"/>
+        <rdfs:comment>Extracted cell(s) of a raster based on a circle.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionByMask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionByMask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CellsExtracted"/>
+        <rdfs:comment>Extracted cell(s) of a raster that correspond to the areas defined by a mask.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionByPoints -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionByPoints">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CellsExtracted"/>
+        <rdfs:comment>Extracted cell(s) of a raster based on points.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionByPolygon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionByPolygon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CellsExtracted"/>
+        <rdfs:comment>Extracted cell(s) of a raster based on a polygon.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionByRectangle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionByRectangle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CellsExtracted"/>
+        <rdfs:comment>Extracted cell(s) of a raster based on a rectangle.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionValuesToPoints -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionValuesToPoints">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CellsExtracted"/>
+        <rdfs:comment>Extracted  cell values of a raster based on a set of points</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#FactorAggregate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#FactorAggregate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeneralizationSettings"/>
+        <rdfs:comment>The factor by which to multiply the cell size of the input raster to obtain the desired resolution for the output raster. For example, a cell_factor of three would result in an output cell size three times larger than that of the input raster.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#FeatureLinearNetwork -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#FeatureLinearNetwork">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#linearStreamNetwork"/>
+        <rdfs:comment>Features representing the linear network.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#FieldRaster -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#FieldRaster">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ReclassSettings"/>
+        <rdfs:comment>raster that contains a field.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Filter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Filter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Neighborhood"/>
+        <rdfs:comment>Represents a preset focal filter on a raster.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#FlowDirection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#FlowDirection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HydrologyAnalysis"/>
+        <rdfs:comment>Flow direction from each cell to its steepest downslope neighbor</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#FlowLength -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#FlowLength">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HydrologyAnalysis"/>
+        <rdfs:comment>Upstream or downstream distance along a flow path.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#FocalFilter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#FocalFilter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Filter"/>
+        <rdfs:comment>Represents a preset focal filter on a raster.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#FocalFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#FocalFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Neighborhood"/>
+        <rdfs:comment>Represents the flow of the values in the raster within each cell&apos;s immediate neighboorhood.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Frequency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Frequency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LocalCalculation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Generalization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Generalization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeneralizationSettings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeneralizationSettings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Generalization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeographicCoordinates -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeographicCoordinates">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#geo"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnnotation"/>
+        <rdfs:comment>Geographic coordinates</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeometricAggregate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeometricAggregate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Geometry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeometricComplex -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeometricComplex">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Geometry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeometricPrimitive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeometricPrimitive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Geometry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Geometry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Geometry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SettingsInOut"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GreaterFrequency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GreaterFrequency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Frequency"/>
+        <rdfs:comment>Represents the number of times a set of rasters is greater than another raster on a cell-by-cell basis.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GroundwaterAnalysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GroundwaterAnalysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GroundwaterSettings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GroundwaterSettings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GroundwaterAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HeadElevation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HeadElevation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GroundwaterAnalysis"/>
+        <rdfs:comment>Represents the groundwater head elevation at that location. The head is typically an elevation above some datum, such as mean sea level</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HighFocalFilter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HighFocalFilter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#FocalFilter"/>
+        <rdfs:comment>HIGH  — Represents a high pass filter over the raster.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HighestPosition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HighestPosition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Position"/>
+        <rdfs:comment>Represents the position of a raster with the maximum value in a set of rasters.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HydrologyAnalysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HydrologyAnalysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HydrologySettings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HydrologySettings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HydrologyAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Impedance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Impedance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Distance_configuration"/>
+        <rdfs:comment>Impedance or cost to move planimetrically through each cell.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Inclusion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Inclusion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TopologicalCategory"/>
+        <rdfs:comment>Example: in, inside....</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#IndexedContourInterval -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#IndexedContourInterval">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ContourInterval"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Interjection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Interjection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Postagg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Interpolatie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Interpolatie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ValuesToPointsSettings"/>
+        <rdfs:comment>Specifies whether or not interpolation will be used.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Interpolation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Interpolation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#InterpolationAttributes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#InterpolationAttributes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ValuesToPointsSettings"/>
+        <rdfs:comment>Parameter to determine if the raster attributes are written to the output point feature dataset.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#InterpolationSettings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#InterpolationSettings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Interpolation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Itinerary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Itinerary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnnotation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LessFrequency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LessFrequency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Frequency"/>
+        <rdfs:comment>Represents the number of times a set of rasters is less than another raster on a cell-by-cell basis.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LineDensity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LineDensity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DensityAnalysis"/>
+        <rdfs:comment>Represents a magnitude per unit area from polyline features that fall within a radius around each cell.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LineStatistics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LineStatistics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Neighborhood"/>
+        <rdfs:comment>Represents a statistic on the attributes of lines in a circular neighborhood around cells.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LineString -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LineString">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Curve"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LinearFeatureThin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LinearFeatureThin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Generalization"/>
+        <rdfs:comment>Thined rasterized linear features by reducing the number of cells representing the width of the features</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LocalCalculation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LocalCalculation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Location">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialSettingsConfiguration"/>
+        <rdfs:comment>For example a raster or feature dataset that identifies the cells or locations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Lookup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Lookup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Reclass"/>
+        <rdfs:comment>For example it can represents a raster by looking up values found in another field in the table of the input raster.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LookupField -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LookupField">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ReclassSettings"/>
+        <rdfs:comment>Field containing the values for a new raster.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LowFocalFilter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LowFocalFilter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#FocalFilter"/>
+        <rdfs:comment>LOW  —  Represents a low pass filter over the raster.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LowestPosition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LowestPosition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Position"/>
+        <rdfs:comment>Represents the position of a raster with the minimum value in a set of rasters.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MAJORITY_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MAJORITY_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#StatisticsType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MAXIMUM_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MAXIMUM_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#StatisticsType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MEAN_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MEAN_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#StatisticsType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MEDIAN_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MEDIAN_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#StatisticsType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MINORITY_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MINORITY_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#StatisticsType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MagnitudeVelocity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MagnitudeVelocity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DarcyVelocity"/>
+        <rdfs:comment>Represents the magnitude of the seepage velocity vector (average linear velocity) at the center of the cell, calculated as the average value of the seepage velocity through the four faces of the cell. It is used with the direction velocity to describe the flow vector.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MajorityFilter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MajorityFilter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Generalization"/>
+        <rdfs:comment>Represents Cells in a raster replaceed based on the majority of their contiguous neighboring cells.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Mask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Mask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeneralizationSettings"/>
+        <rdfs:comment>For example a raster used as the mask.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MaskArea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MaskArea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionArea"/>
+        <rdfs:comment>mask data defining areas to extract. For example a a raster or feature dataset.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Mass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Mass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GroundwaterAnalysis"/>
+        <rdfs:comment>A value for the amount of mass released instantaneously at the source point, in units of mass.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MaxAggregate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MaxAggregate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Aggregate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MaxLikelihoodClassification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MaxLikelihoodClassification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Multivariate"/>
+        <rdfs:comment>A maximum likelihood classification on a set of raster bands.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MeanAggregate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MeanAggregate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Aggregate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MedianAggregate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MedianAggregate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Aggregate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MinAggregate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MinAggregate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Aggregate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultiCurve -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultiCurve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeometricAggregate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultiGeometry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultiGeometry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeometricAggregate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultiLineString -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultiLineString">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeometricAggregate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultiPoint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultiPoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeometricAggregate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultiPolygon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultiPolygon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeometricAggregate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultiSolid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultiSolid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeometricAggregate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultiSurface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultiSurface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeometricAggregate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultibandRaster -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultibandRaster">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultivariateSettings"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Raster"/>
+        <rdfs:comment>The  multiband raster dataset with probability layers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Multivariate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Multivariate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultivariateSettings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultivariateSettings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Multivariate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#NaturalNeighbor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#NaturalNeighbor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Interpolation"/>
+        <rdfs:comment>Interpolated surface from points using a natural neighbor technique.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Neighborhood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Neighborhood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#NeutralRaster -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#NeutralRaster">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Raster"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Nibble -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Nibble">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Generalization"/>
+        <rdfs:comment>Cells of raster Replaced corresponding to a mask with the values of the nearest neighbors.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#NormalRaster -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#NormalRaster">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#NeutralRaster"/>
+        <rdfs:comment>Represents a raster of random values with a normal distribution on a cell-by-cell basis within the Analysis window.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Noun -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Noun">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Postagg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#NumberClasses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#NumberClasses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultivariateSettings"/>
+        <rdfs:comment>Number of classes into which to group the cells. For example used  to determine the characteristics of the natural groupings of cells in multidimensional attribute space.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#NumberZonesSlice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#NumberZonesSlice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ReclassSettings"/>
+        <rdfs:comment>Number zones slice</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Numeral -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Numeral">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Postagg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Offset -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Offset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnnotation"/>
+        <rdfs:comment>Spatial relation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#OrientableCurve -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#OrientableCurve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Curve"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#OrientableSurface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#OrientableSurface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Orientation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Orientation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DirectionalCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ParameterSummary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ParameterSummary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#InterpolationSettings"/>
+        <rdfs:comment>Represents All inputs and parameters used.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ParticleTrack -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ParticleTrack">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GroundwaterAnalysis"/>
+        <rdfs:comment>Particle tracking</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PerCellStatistics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PerCellStatistics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LocalCalculation"/>
+        <rdfs:comment>Represents a per-cell statistics from multiple rasters.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PlaceName -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PlaceName">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnnotation"/>
+        <rdfs:comment>Geographical place</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PlanCurve -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PlanCurve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Curvature"/>
+        <rdfs:comment>Represents the curvature of the surface perpendicular to the slope direction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Point -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Point">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeometricPrimitive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PointFeature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PointFeature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ValuesToPointsSettings"/>
+        <rdfs:comment>The point features to which you want to add raster values.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Polygon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Polygon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PolygonCoordinates -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PolygonCoordinates">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionArea"/>
+        <rdfs:comment>Polygon that defines the area to be extracted. X,Y coordinates define the vertices of the polygon.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PolygonsContour -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PolygonsContour">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Contour"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PolylinesContour"/>
+        <rdfs:comment>Polygons  — closed polygons representing the contours.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PolylineFeatureLineStasctics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PolylineFeatureLineStasctics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Neighborhood"/>
+        <rdfs:comment>Represents polyline features to calculate the Line Statistics.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PolylinesContour -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PolylinesContour">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Contour"/>
+        <rdfs:comment>Polylines  — is the contour or isoline.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Popularity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Popularity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LocalCalculation"/>
+        <rdfs:comment>Represents the value at a certain level of popularity on a cell-by-cell basis.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PopularityPosition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PopularityPosition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Position"/>
+        <rdfs:comment>Represents the popularity position.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PopulationField -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PopulationField">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DensitySettings"/>
+        <rdfs:comment>The population field is the count or quantity to be spread across the landscape to create continuous surface.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Porosity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Porosity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GroundwaterAnalysis"/>
+        <rdfs:comment>Represents the effective formation porosity at a location.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Position -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Position">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LocalCalculation"/>
+        <rdfs:comment>Represents the position of a raster with the value in a set of rasters.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Postagg -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Postagg">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TextProcessing"/>
+        <rdfs:comment>Represents morphosyntactic annotation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PourPoint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PourPoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HydrologyAnalysis"/>
+        <rdfs:comment>The  pour point locations. For example for a raster, this represents cells above which the contributing area, or catchment, will be determined or the pour point locations that are to be snapped.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PourPointField -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PourPointField">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HydrologyAnalysis"/>
+        <rdfs:comment>Field used to assign values to the pour point locations. I</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Preposition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Preposition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Postagg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PrincipalComponentParameters -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PrincipalComponentParameters">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Multivariate"/>
+        <rdfs:comment>Represents principal component parameters.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ProfileCurve -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ProfileCurve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Curvature"/>
+        <rdfs:comment>Represents profile curve. This is the curvature of the surface in the direction of slope.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Pronoun -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Pronoun">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Postagg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RANGE_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RANGE_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#StatisticsType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RMS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RMS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#InterpolationSettings"/>
+        <rdfs:comment>Represents RMS error and the Chi-Square of the interpolation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RandomRaster -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RandomRaster">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#NeutralRaster"/>
+        <rdfs:comment>Represents a raster of random floating point values between 0 and 1 on a cell-by-cell basis within the Analysis window.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Rank -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Rank">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LocalCalculation"/>
+        <rdfs:comment>Represents the value of a set of rasters based on a rank level specified by another raster.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RankPosition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RankPosition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Position"/>
+        <rdfs:comment>Represents the rank position.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Raster -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Raster">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ArgumentRaster"/>
+        <rdfs:comment>raster</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RasterBands -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RasterBands">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultivariateSettings"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Raster"/>
+        <rdfs:comment>Raster bands</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RasterCreation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RasterCreation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RasterSettings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RasterSettings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RasterCreation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Reclass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Reclass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ReclassByASCII -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ReclassByASCII">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Reclass"/>
+        <rdfs:comment>Represents reclassified or changed  values of  cells of a raster.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ReclassSettings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ReclassSettings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Reclass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RectangleCoordinates -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RectangleCoordinates">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionArea"/>
+        <rdfs:comment>X minimum and y minimum define the lower-left coordinates of the area to be extracted, and x maximum and y maximum define the upper-right coordinates.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RegionGroup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RegionGroup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Generalization"/>
+        <rdfs:comment>Regiongroup records the identify of the connected region.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RegularizedSpline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RegularizedSpline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Spline"/>
+        <rdfs:comment>REGULARIZED  — Yields a smooth surface and smooth first derivatives.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RemapReclass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RemapReclass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ReclassSettings"/>
+        <rdfs:comment>For example a remap file defining the single values or ranges to be reclassified.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#STD_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#STD_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#StatisticsType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Sample -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Sample">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultivariateSettings"/>
+        <rdfs:comment>The set of class samples. It can be an integer raster or a feature dataset.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SampledCell -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SampledCell">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CellsAnalysis"/>
+        <rdfs:comment>Represents the value(s) of cell(s, for example from a raster, or set of rasters, for defined locations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SettingsInOut -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SettingsInOut"/>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Signature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Signature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Multivariate"/>
+        <rdfs:comment>For example signature file whose class signatures are used.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SignatureIsoCluster -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SignatureIsoCluster">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Signature"/>
+        <rdfs:comment>Represents characteristics of the natural groupings of cells in multidimensional attribute space.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SignatureRemap -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SignatureRemap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Signature"/>
+        <rdfs:comment>Signature containing the class IDs to be merged, renumbered, or deleted.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Sink -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Sink">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HydrologyAnalysis"/>
+        <rdfs:comment>Sinks or areas of internal drainage.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SinkFeatures -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SinkFeatures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#InterpolationSettings"/>
+        <rdfs:comment>Represents the point feature class of the remaining sink point features. .</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SinkFill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SinkFill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Sink"/>
+        <rdfs:comment>For example Sinks Filled in a surface raster for example to remove small imperfections in the data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Slice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Slice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Reclass"/>
+        <rdfs:comment>Represents sliced range of values of  cells of a raster by zones of equal interval, equal area, or by natural breaks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SnapDistance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SnapDistance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HydrologySettings"/>
+        <rdfs:comment>Maximum distance, in map units, to search for a cell of higher accumulated flow.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SnapPourPoint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SnapPourPoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PourPoint"/>
+        <rdfs:comment>For example snaps pour points to the cell of highest flow accumulation within a specified distance.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Solid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Solid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeometricPrimitive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SourceLocation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SourceLocation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Distance_configuration"/>
+        <rdfs:comment>The source locations. A raster or feature dataset that identifies the cells or locations to which the least accumulated cost distance for every cell is calculated.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SourcePoint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SourcePoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GroundwaterSettings"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialSettingsConfiguration"/>
+        <rdfs:comment>For example the location of the source point from which to begin the particle trackings.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnalysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnalysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SettingsInOut"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnnotation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnnotation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TextProcessing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnnotation"/>
+        <rdfs:comment>Spatial Entity</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialNamedEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialNamedEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PlaceName"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialEntity"/>
+        <rdfs:comment>Spatial Named Entity. Example: Lac de Gabas, Col de l&apos;Aubisque.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialNominalEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialNominalEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PlaceName"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialEntity"/>
+        <rdfs:comment>Spatial Nominal Entity. Example: église, château, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialSettingsConfiguration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialSettingsConfiguration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnalysis"/>
+        <rdfs:comment>Represents parameters that configure other parameters</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Spline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Spline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Interpolation"/>
+        <rdfs:comment>Interpolated surface from points using a minimum curvature spline technique.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SplineWithBarriers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SplineWithBarriers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Spline"/>
+        <rdfs:comment>Interpolated surface, using barriers, from points using a minimum curvature spline technique.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#StatisticsType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#StatisticsType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialSettingsConfiguration"/>
+        <rdfs:comment>Statistics type.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#StreamFeatures -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#StreamFeatures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#InterpolationSettings"/>
+        <rdfs:comment>The  line feature class of stream polyline features and ridge line features.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#StreamLink -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#StreamLink">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#linearStreamNetwork"/>
+        <rdfs:comment>Value to sections of  linear network between intersections.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#StreamOrder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#StreamOrder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HydrologySettings"/>
+        <rdfs:comment>Order representing branches of a linear network .</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SumAggregate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SumAggregate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Aggregate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Surface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Surface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeometricPrimitive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SurfaceAnalysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SurfaceAnalysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SurfaceSettings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SurfaceSettings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SurfaceAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TabulateArea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TabulateArea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalAnalysis"/>
+        <rdfs:comment>Cross-tabulated areas between two datasets.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TensionSpline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TensionSpline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Spline"/>
+        <rdfs:comment>TENSION  — Tunes the stiffness of the interpolant according to the character of the modeled phenomenon.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TextDescription -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TextDescription">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TextProcessing"/>
+        <rdfs:comment>A text that describes a geospatial situation, for example a hike.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TextProcessing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TextProcessing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Thickness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Thickness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GroundwaterAnalysis"/>
+        <rdfs:comment>Represents the saturated thickness at a location. The value for the thickness is interpreted from geological properties of the aquifer.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TopoFeature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TopoFeature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#InterpolationSettings"/>
+        <rdfs:comment>Represents z-values to be interpolated into a surface raster.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TopologicalCategory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TopologicalCategory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Offset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TrackASCII -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TrackASCII">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ParticleTrack"/>
+        <rdfs:comment>ASCII text file that contains the particle tracking data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TrackPolyline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TrackPolyline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ParticleTrack"/>
+        <rdfs:comment>Represents the line feature class containing the particle track. It can contains a series of arcs with attributes for position, local velocity direction and magnitude, and cumulative length and time of travel along the path.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Transmissivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Transmissivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GroundwaterAnalysis"/>
+        <rdfs:comment>Represents the formation transmissivity at a location.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Trend -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Trend">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Interpolation"/>
+        <rdfs:comment>Interpolated surface from points using a trend technique.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#VARIETY_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#VARIETY_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#StatisticsType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ValuesToPointsSettings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ValuesToPointsSettings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtactionSettings"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Verb -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Verb">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Postagg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Watershed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Watershed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HydrologyAnalysis"/>
+        <rdfs:comment>For example, it can represents the contributing area above a set of cells in a raster.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#WeightZone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#WeightZone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalSettings"/>
+        <rdfs:comment>Weight to be assigned to each zone</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#WhereClause -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#WhereClause">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#AttributesSettings"/>
+        <rdfs:comment>For example an SQL expression used to select a subset of raster cells..</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZField -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZField">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#InterpolationSettings"/>
+        <rdfs:comment>Field that holds a height or magnitude value for each point. This can be a numeric field or the Shape field if the Input point features contain z-values.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZValue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZValue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#InterpolationSettings"/>
+        <rdfs:comment>The point features containing the z-values to be interpolated into a surface raster.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalAnalysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalAnalysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalFill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalFill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalAnalysis"/>
+        <rdfs:comment>Zone Filled using the minimum cell value from a weight raster along the zone boundary.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalGeometry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalGeometry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalAnalysis"/>
+        <rdfs:comment>Represents the specified geometry measure (area, perimeter, thickness, or the characteristics of ellipse).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalSettings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalSettings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalStatistics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalStatistics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalAnalysis"/>
+        <rdfs:comment>For example, a statistics on values of a raster within the zones of another dataset.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalValueStatistics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalValueStatistics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalSettings"/>
+        <rdfs:comment>Raster that contains the values on which to calculate a statistic</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Zone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Zone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalAnalysis"/>
+        <rdfs:comment>Geographical area.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZoneData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZoneData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalSettings"/>
+        <rdfs:comment>For example the dataset that defines the zones.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZoneField -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZoneField">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalSettings"/>
+        <rdfs:comment>For example, the field that holds the values that define each zone.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZoneShrink -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZoneShrink">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Generalization"/>
+        <rdfs:comment>zone Shrinked by a specified number of cells.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#geo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#geo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialAnnotation"/>
+        <rdfs:comment>Geographic coordinates</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#linearStreamNetwork -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#linearStreamNetwork">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#HydrologyAnalysis"/>
+        <rdfs:comment>A raster that represents a linear stream network.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DirectionalCategory"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DistanceCategory"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TopologicalCategory"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MAJORITY_Type"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MAXIMUM_Type"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MEAN_Type"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MEDIAN_Type"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MINORITY_Type"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RANGE_Type"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#VARIETY_Type"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

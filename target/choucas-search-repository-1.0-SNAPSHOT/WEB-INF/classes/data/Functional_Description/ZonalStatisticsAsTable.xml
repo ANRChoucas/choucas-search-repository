@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:ProcessOfferings xmlns:wps="http://www.opengis.net/wps/2.0.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/2.0.0 ../wpsDescribeProcess.xsd">
+   <wps:ProcessOffering outputTransmission="value reference">
+      <wps:Process>
+         <ows:Identifier>ZonalSatatisticsAsTable</ows:Identifier>
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/process-profile/concept_functionality" xlink:href="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Zone_treatment_service" />
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/ def/process/description/documentation" xlink:href="https://52north.org/" />
+         <ows:Title>ZonalStatisticsAsTable_sa</ows:Title>
+         <ows:Abstract>Summarizes the values of a raster within the zones of another dataset and reports the results to a table. Uses ArcObjects library - Spatial Analyst</ows:Abstract>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>in_zone_data</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Zone" />
+            <ows:Title>in zone data</ows:Title>
+            <ows:Abstract>Dataset that defines the zones. It can be a raster or feature dataset.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>zone_field</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZoneField" />
+            <ows:Title>zone field</ows:Title>
+            <ows:Abstract>Field that holds the values that define each zone.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#string">String</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>in_value_raster</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalValueStatistics" />
+            <ows:Title>in value raster</ows:Title>
+            <ows:Abstract>Raster that contains the values for which to calculate a statistic.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>ignore_nodata</ows:Identifier>
+            <ows:Title>ignore nodata</ows:Title>
+            <ows:Abstract>Denotes whether NoData values on the Value input will influence the results of the zone that they fall within.
+					DATA  — Within any particular zone, only cells that have a value in the input Value raster will be used in determining the output value for that zone. NoData cells in the Value raster will be ignored in the statistic calculation. 
+					NODATA  — Within any particular zone, if any NoData cells exist in the Value raster it is deemed that there is insufficient information to perform statistical calculations for all the cells in that zone. Therefore, the entire zone will receive the NoData value on the output raster.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#boolean">Boolean</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Output>
+            <ows:Identifier>out_table</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZonalStatistics" />
+            <ows:Title>out table</ows:Title>
+            <ows:Abstract>Output table that will contain the summary of the values in each zone.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/dbf" default="true" />
+            </wps:ComplexData>
+         </wps:Output>
+         <ows:Metadata xlink:role="http://choucas.ign.fr/spec/wps /2.0/def/process-profile/Non-functional_properties" xlink:href="./NonFunctional_Description/NFAZonalStatisticsAsTable.xml" />
+      </wps:Process>
+   </wps:ProcessOffering>
+</wps:ProcessOfferings>

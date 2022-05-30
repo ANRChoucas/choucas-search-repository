@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:ProcessOfferings xmlns:wps="http://www.opengis.net/wps/2.0.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/2.0.0 ../wpsDescribeProcess.xsd">
+   <wps:ProcessOffering outputTransmission="value reference">
+      <wps:Process>
+         <ows:Identifier>FlowDirection</ows:Identifier>
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/process-profile/concept_functionality" xlink:href="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Hydrology_treatment_service" />
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/ def/process/description/documentation" xlink:href="https://52north.org/" />
+         <ows:Title>FlowDirection_sa</ows:Title>
+         <ows:Abstract>Creates a raster of flow direction from each cell to its steepest downslope neighbor. Uses ArcObjects library - Spatial Analyst</ows:Abstract>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>in_surface_raster</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Surface" />
+            <ows:Title>in surface raster</ows:Title>
+            <ows:Abstract>The input raster representing a continuous surface.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>force_flow</ows:Identifier>
+            <ows:Title>force flow</ows:Title>
+            <ows:Abstract>Specifies if edge cells will always flow outward or follow normal flow rules.  NORMAL — If the maximum drop on the inside of an edge cell is greater than zero, the flow direction will be determined as usual; otherwise, the flow direction will be toward the edge. Cells that should flow from the edge of the surface raster inward will do so. FORCE — All cells at the edge of the surface raster will flow outward from the surface raster.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#boolean">Boolean</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Output>
+            <ows:Identifier>out_flow_direction_raster</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#FlowDirection" />
+            <ows:Title>out flow direction raster</ows:Title>
+            <ows:Abstract>The output raster that shows the flow direction from each cell to its steepest downslope neighbor.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Output>
+         <wps:Output>
+            <ows:Identifier>out_drop_raster</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Drop" />
+            <ows:Title>out drop raster</ows:Title>
+            <ows:Abstract>An optional output drop raster. The drop raster shows the ratio of the maximum change in elevation from each cell along the direction of flow to the path length between centers of cells, expressed in percentages.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Output>
+         <ows:Metadata xlink:role="http://choucas.ign.fr/spec/wps /2.0/def/process-profile/Non-functional_properties" xlink:href="./NonFunctional_Description/NFFlowDirection.xml" />
+      </wps:Process>
+   </wps:ProcessOffering>
+</wps:ProcessOfferings>

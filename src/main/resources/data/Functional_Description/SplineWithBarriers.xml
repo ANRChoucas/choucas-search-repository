@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:ProcessOfferings xmlns:wps="http://www.opengis.net/wps/2.0.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/2.0.0 ../wpsDescribeProcess.xsd">
+   <wps:ProcessOffering outputTransmission="value reference">
+      <wps:Process>
+         <ows:Identifier>SplineWithBarriers</ows:Identifier>
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/process-profile/concept_functionality" xlink:href="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Interpolation_service" />
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/ def/process/description/documentation" xlink:href="https://52north.org/" />
+         <ows:Title>SplineWithBarriers_sa</ows:Title>
+         <ows:Abstract>Interpolates a surface, using barriers, from points using a minimum curvature spline technique. The barriers are entered as either polygon or polyline features. The barriers are entered as either polygon or polyline features. Uses ArcObjects library - Spatial Analyst</ows:Abstract>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>input_point_features</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZValue" />
+            <ows:Title>input point features</ows:Title>
+            <ows:Abstract>The input point features containing z-values to be interpolated into a surface raster.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/x-zipped-shape" default="true" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>z_field</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZField" />
+            <ows:Title>z field</ows:Title>
+            <ows:Abstract>Field that holds a height or magnitude value for each point. This can be a numeric field or the shape field if the in_point_features contain z-values.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#string">String</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>Output_cell_size</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CellSize" />
+            <ows:Title>Output cell size</ows:Title>
+            <ows:Abstract>The cell size at which the output raster will be created. If a value of zero is entered the shorter of the width or the height of the extent of the input point features in the input spatial reference, divided by 250, will be used as the cell size.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#double">Double</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>input_barrier_features</ows:Identifier>
+            <ows:Title>input barrier features</ows:Title>
+            <ows:Abstract>The optional input barrier features to constrain the interpolation.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/x-zipped-shape" default="true" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>smoothing_factor</ows:Identifier>
+            <ows:Title>smoothing factor</ows:Title>
+            <ows:Abstract>The parameter that influences the smoothing of the output surface. No smoothing is applied when the value is zero and the maximum amount of smoothing is applied when the factor equals 1. The default is 0.0.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#double">Double</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Output>
+            <ows:Identifier>Output_raster</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SplineWithBarriers" />
+            <ows:Title>Output raster</ows:Title>
+            <ows:Abstract>The output raster surface to be created.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Output>
+         <ows:Metadata xlink:role="http://choucas.ign.fr/spec/wps /2.0/def/process-profile/Non-functional_properties" xlink:href="./NonFunctional_Description/NFSplineWithBarriers.xml" />
+      </wps:Process>
+   </wps:ProcessOffering>
+</wps:ProcessOfferings>

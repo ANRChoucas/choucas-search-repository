@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:ProcessOfferings xmlns:wps="http://www.opengis.net/wps/2.0.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/2.0.0 ../wpsDescribeProcess.xsd">
+   <wps:ProcessOffering outputTransmission="value reference">
+      <wps:Process>
+         <ows:Identifier>CalculItinairaire</ows:Identifier>
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/process-profile/concept_functionality" xlink:href="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Itinerary_determination_service" />
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/ def/process/description/documentation" xlink:href="https://geoservices.ign.fr/documentation/geoservices/itineraires.html" />
+         <ows:Title>Itinerary calculation service</ows:Title>
+         <ows:Abstract>The itinerary calculation service of the Geoportal platform allows you to obtain a route between two points according to a particular route profile.</ows:Abstract>
+         <wps:Input minOccurs="1">
+            <ows:Title>content</ows:Title>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeographicCoordinates" />
+            <ows:Abstract>Long and lat of departure</ows:Abstract>
+            <ows:Identifier>content</ows:Identifier>
+            <wps:ComplexData>
+               <wps:Format mimeType="text/xml" encoding="UTF-8" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="1">
+            <ows:Title>content</ows:Title>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#GeographicCoordinates" />
+            <ows:Abstract>Long and lat of arrival</ows:Abstract>
+            <ows:Identifier>content</ows:Identifier>
+            <wps:ComplexData>
+               <wps:Format mimeType="text/xml" encoding="UTF-8" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="0">
+            <ows:Title>content</ows:Title>
+            <ows:Abstract>Long and lat intermediate.</ows:Abstract>
+            <ows:Identifier>content</ows:Identifier>
+            <wps:ComplexData>
+               <wps:Format mimeType="text/xml" encoding="UTF-8" schema="link to xsd schema description" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Output>
+            <ows:Title>content</ows:Title>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Itinerary" />
+            <ows:Abstract>Itinerary contains one or more place names.</ows:Abstract>
+            <ows:Identifier>content</ows:Identifier>
+            <wps:ComplexData>
+              <wps:Format mimeType="application/json" encoding="UTF-8" default="true" />
+            </wps:ComplexData>
+         </wps:Output>
+         <ows:Metadata xlink:role="http://choucas.ign.fr/spec/wps /2.0/def/process-profile/Non-functional_properties" xlink:href="./NonFunctional_Description/NFCalculItinairaire.xml" />
+      </wps:Process>
+   </wps:ProcessOffering>
+</wps:ProcessOfferings>

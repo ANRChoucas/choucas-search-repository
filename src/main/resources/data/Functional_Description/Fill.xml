@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:ProcessOfferings xmlns:wps="http://www.opengis.net/wps/2.0.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/2.0.0 ../wpsDescribeProcess.xsd">
+   <wps:ProcessOffering outputTransmission="value reference">
+      <wps:Process>
+         <ows:Identifier>Fill</ows:Identifier>
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/process-profile/concept_functionality" xlink:href="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Hydrology_treatment_service" />
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/ def/process/description/documentation" xlink:href="https://52north.org/" />
+         <ows:Title>Fill_sa</ows:Title>
+         <ows:Abstract>Fills sinks in a surface raster to remove small imperfections in the data. Uses ArcObjects library - Spatial Analyst</ows:Abstract>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>in_surface_raster</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Surface" />
+            <ows:Title>in surface raster</ows:Title>
+            <ows:Abstract>The input raster representing a continuous surface.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>z_limit</ows:Identifier>
+            <ows:Title>z limit</ows:Title>
+            <ows:Abstract>Maximum elevation difference between a sink and its pour point to be filled. If the difference in z-values between a sink and its pour point is greater than the {z_limit}, that sink will not be filled. The default is to fill all sinks, regardless of depth.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#double">Double</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Output>
+            <ows:Identifier>out_surface_raster</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SinkFill" />
+            <ows:Title>out surface raster</ows:Title>
+            <ows:Abstract>The output surface raster after the sinks have been filled.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Output>
+         <ows:Metadata xlink:role="http://choucas.ign.fr/spec/wps /2.0/def/process-profile/Non-functional_properties" xlink:href="./NonFunctional_Description/NFFill.xml" />
+      </wps:Process>
+   </wps:ProcessOffering>
+</wps:ProcessOfferings>

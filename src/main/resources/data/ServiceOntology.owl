@@ -1,0 +1,985 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#"
+     xml:base="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:obda="https://w3id.org/obda/vocabulary#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6">
+        <rdfs:comment>To perform our experimentation in the context of the Choucas project (http://choucas.ign.fr/) and with the objective of proposing an approach to Geospatial Web Service (GWS) discovery through semantic annotation of Web Processing service (WPS) service descriptions, we have designed a service ontology in order to annotate semantically the service functionality. Service ontology represents the main categories of geospatial services and their relationships. This ontology extends the categorisation proposed by the \acr{ISO} \texttt{19119~: 2016} standard with new sub-categories related to the services used in our corpus.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Aspect_identification_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Aspect_identification_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Aspect/Contour/Curvature_manipulation_service"/>
+        <rdfs:comment>Example: Aspect identifies the direction of the downward slope of the maximum rate of change of value from each cell to its neighbors. The aspect can be thought of as the direction of the slope. The output raster values will be the compass direction of the aspect.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Autocompletion_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Autocompletion_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_thematic_aspect"/>
+        <rdfs:comment>The autocomplete service is intended to suggest likely locations as you type in a place name, address, or other reference to a geospatial entity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Bitwise_processing_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Bitwise_processing_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Mathematical_processing_service"/>
+        <rdfs:comment>Example : Performs a &quot;Bitwise And&quot; operation on the binary values of two input rasters.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Calculation_statistics_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Calculation_statistics_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_metadata"/>
+        <rdfs:comment>service for calculating statistics for a data set, such as standard deviations, modals, medians and means, histogram statistics and histogram calculations, minimum and maximum values of an image, multi-band cross-correlation matrices, spectral statistics, spatial statistics and other statistical calculations</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Catalog_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Catalog_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_services_for_model_and_geographic_information_management"/>
+        <rdfs:comment>service providing discovery and management services in an instance metadata store.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Chain_definition_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Chain_definition_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Workflow/geographic_tasking_management_services"/>
+        <rdfs:comment>service allowing to define a chain and to make it executed by the
+by the workflow control service. This includes information about its start and completion conditions the activities and rules that constitute it to navigate between them, user tasks to be undertaken, references to applications that might be called, definition of any relevant workflow data that might need to be referenced, etc.
+The chain definition service can also provide a chain validation service.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Combination_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Combination_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Multi-band_image_manipulation"/>
+        <rdfs:comment>Example: service that combines multiple rasters to a single output value.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Contour_calculation_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Contour_calculation_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Aspect/Contour/Curvature_manipulation_service"/>
+        <rdfs:comment>Example : Creation of contours or isolines from a raster surface.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Coordinates_conversion_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Coordinates_conversion_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect"/>
+        <rdfs:comment>service to change coordinates based on one coordinate system to coordinates based on another system based on the same data. During a coordinate conversion, the parameter values are accurate. The coordinate conversion service includes map projection services. Coordinate conversion is the responsibility of 1150 19111.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Coordinates_transformation_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Coordinates_transformation_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect"/>
+        <rdfs:comment>service for changing coordinates based on a reference system based on one datum to coordinates based on a reference system based on another datum. Coordinate transformation differs from coordinate conversion in that the parameter values for the coordinate transformation are derived empirically. Therefore, there may be several different estimates (or realizations). Coordinate transformation falls under ISO 19111.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Coverage_Access_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Coverage_Access_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_services_for_model_and_geographic_information_management"/>
+        <rdfs:comment>service allowing the client to access and manage a store of blankets. A cover is considered a special case of an entity. An access service may include a query that filters the data returned to the client.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Curvature_calculation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Curvature_calculation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Aspect/Contour/Curvature_manipulation_service"/>
+        <rdfs:comment>Example: Calculates the curvature of a raster surface, possibly including the profile and the curvature of the plane.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Density_calculation_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Density_calculation_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Proximity_Analysis_Service"/>
+        <rdfs:comment>Example: A service that calculates a magnitude per unit area from polyline entities located in a radius around each cell.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Dimensional_measurement_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Dimensional_measurement_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect"/>
+        <rdfs:comment>A service that calculates the dimensions of objects visible on an image or other geographic data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Direct_geocoding_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Direct_geocoding_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geocoding_service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Distance_calculation_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Distance_calculation_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Proximity_Analysis_Service"/>
+        <rdfs:comment>Example: a service that calculates the Euclidean distance.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Distance_direction_calculation_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Distance_direction_calculation_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Distance_calculation_service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Distance_neighbor_calculation_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Distance_neighbor_calculation_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Distance_calculation_service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Distance_path_calculation_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Distance_path_calculation_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Distance_calculation_service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Distance_sum_calculation_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Distance_sum_calculation_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Distance_calculation_service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Distance_zone_calculation_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Distance_zone_calculation_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Distance_calculation_service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Encoding_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Encoding_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_communication_services"/>
+        <owl:backwardCompatibleWith>service allowing the implementation of an encoding rule and serving as an interface for the encoding and decoding functionality.</owl:backwardCompatibleWith>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Entity_Manipulation_Services -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Entity_Manipulation_Services">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect"/>
+        <rdfs:comment>these services allow to align one feature to another, to an image or to another set of data or coordinates, to correct relative offsets, rotational differences, scale differences and perspective differences, to verify that all features in the feature compilation are topologically consistent with respect to the feature compilation topology rules and to identify and/or correct any inconsistencies found.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Entity_access_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Entity_access_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_services_for_model_and_geographic_information_management"/>
+        <rdfs:comment>service that allows the client to access and manage an entity store. An access service may include a query that filters the data returned to the client.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Entity_generalization_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Entity_generalization_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_thematic_aspect"/>
+        <rdfs:comment>For example a service that generalizes entity types in a compilation of entities to enhance communication efficiency by remedying the undesirable effects of data reduction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Entity_generalization_service_Spatial_aspect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Entity_generalization_service_Spatial_aspect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect"/>
+        <rdfs:comment>service that reduces spatial variation in a compilation of entities to enhance communication efficiency by remedying the undesirable effects of data reduction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Entity_matching_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Entity_matching_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect"/>
+        <rdfs:comment>service which entities and parts of entities from various data sources represent the same real-world entity, e.g. edge matching and bounded confusion.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Entity_types_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Entity_types_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_services_for_model_and_geographic_information_management"/>
+        <rdfs:comment>service that allows the client to access and manage a store of entity type definitions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#GeoRM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#GeoRM">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_system_management_services_and_security_services"/>
+        <rdfs:comment>Geospatial Right Management.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geocoding_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geocoding_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_thematic_aspect"/>
+        <rdfs:comment>Service allowing to complete the references to places in the texts by indicating the geographical coordinates (or another spatial reference).</rdfs:comment>
+        <rdfs:label>Geocoding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_Directory_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_Directory_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_services_for_model_and_geographic_information_management"/>
+        <rdfs:comment>service allowing access to a directory of instances of one or more
+or more classes of real-world phenomena containing positional information.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_annotation_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_annotation_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_metadata"/>
+        <rdfs:comment>service for adding auxiliary information that enhances the description or provides a more complete description.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_communication_services -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_communication_services">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geogaphic_service_(GS)"/>
+        <rdfs:comment>Services related to the encoding, conversion and transfer of data over communication networks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_compression_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_compression_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_communication_services"/>
+        <rdfs:comment>service to convert the spatial parts of a compilation of entities from uncompressed to compressed form and vice versa.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_format_conversion_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_format_conversion_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_communication_services"/>
+        <owl:backwardCompatibleWith>service allowing to convert from one geographic data format to another.</owl:backwardCompatibleWith>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_information_extraction_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_information_extraction_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_thematic_aspect"/>
+        <rdfs:comment>services for extracting feature and terrain information from remotely sensed and scanned images.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_parameter_calculation_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_parameter_calculation_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_thematic_aspect"/>
+        <rdfs:comment>service that provides quantitative, application-oriented results that cannot be obtained from raw data alone.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geogaphic_service_(GS)"/>
+        <rdfs:comment>Services that perform calculations involving data. Examples include services that provide time, services that check spelling, and services that perform coordinate transformations (e.g., accept a set of coordinates expressed using a certain reference system and convert them to a set of coordinates using a different reference system). A processing service does not include capabilities to provide continuous data storage or to transfer data over networks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_metadata -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_metadata">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_temporal_aspect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_temporal_aspect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_thematic_aspect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_thematic_aspect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_service_with_human_interaction_limiting_interaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_service_with_human_interaction_limiting_interaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geogaphic_service_(GS)"/>
+        <rdfs:comment>Services for managing user interfaces, graphs, multimedia, and the presentation of compound documents, user interface dialogues, and interaction with other system boundary elements such as physical sensors.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_services_for_model_and_geographic_information_management -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_services_for_model_and_geographic_information_management">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geogaphic_service_(GS)"/>
+        <rdfs:comment>Services for managing the development, manipulation and storage of metadata, conceptual schemas and data sets.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_system_management_services_and_security_services -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_system_management_services_and_security_services">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geogaphic_service_(GS)"/>
+        <rdfs:comment>Services for the management of system components, applications and networks. These services also include the management of user accounts and user access privileges.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_visualizer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_visualizer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_service_with_human_interaction_limiting_interaction"/>
+        <rdfs:comment>customer service allowing the user to view one or more
+compilations of entities or covers. This viewer allows the user to interact with the map data map data, for example with display, overlay and query.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_visualizer_animation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_visualizer_animation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_visualizer"/>
+        <rdfs:comment>geographic viewer allowing a human to sequence views of the same geographic location at different times.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_visualizer_images -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_visualizer_images">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_visualizer"/>
+        <rdfs:comment>images: geographic viewer visualizing coverage data including mapping of sample dimensions into coverage the colors of the display.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_visualizer_paving -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_visualizer_paving">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_visualizer"/>
+        <rdfs:comment>geographic viewer allowing the combination of geographic data views view of geographic data views of adjacent areas into a single view.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_visualizer_perspective -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_visualizer_perspective">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_visualizer"/>
+        <rdfs:comment>geographic perspective viewer that allows you to change the point of view, e.g. to specify how high above the ground, in which direction and at what angle a viewpoint displays a scene direction and from which angle a viewpoint visualizes a scene</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geometric_sensor_model_fitting_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geometric_sensor_model_fitting_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect"/>
+        <rdfs:comment>service to adjust the geometric models of the sensors to improve the match of the image with other known images and/or ground positions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geosemantic_analysis_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geosemantic_analysis_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_thematic_aspect"/>
+        <rdfs:comment>service to search textual documents for references to places, such as place names, addresses, postal codes, etc., in view of a geocoding service.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Grid_modification_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Grid_modification_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect"/>
+        <rdfs:comment>service allowing to modify the grid of the geographical data
+geographic data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Groundwater_calculation_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Groundwater_calculation_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_parameter_calculation_service"/>
+        <rdfs:comment>Example: Calculate the volume balance of residual groundwater and other outputs for a constant flow in an aquifer.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Hydrology_treatment_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Hydrology_treatment_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect"/>
+        <rdfs:comment>Example: service that delineates all watersheds.
+
+Example 2: service that creates a flow direction raster from each cell to its steepest downhill neighbor.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Image_compression_services -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Image_compression_services">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Image_processing_service"/>
+        <rdfs:comment>services for automated detection of image changes, differentiation of rectified images, analysis and display of the significance of differences, and differentiation by area and pattern.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Image_coordinate_conversion_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Image_coordinate_conversion_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect"/>
+        <rdfs:comment>coordinate transformation or conversion service that allows the coordinate reference system for an image to be changed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Image_geometric_model_conversion_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Image_geometric_model_conversion_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect"/>
+        <rdfs:comment>service to convert the geometric models of the sensors into a different, but equivalent geometric model.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Image_manipulation_services -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Image_manipulation_services">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Image_processing_service"/>
+        <rdfs:comment>services to manipulate the data values in the images: modification of images: modification of color and contrast values, application of different filters, manipulation of image resolution, noise reduction, streak reduction, radiometric corrections, atmospheric corrections, atmospheric attenuation, modification of scene lighting, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Image_processing_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Image_processing_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_thematic_aspect"/>
+        <rdfs:comment>service that allows the values of thematic attributes of an image to be modified by means of a mathematical function. Examples of functions include convolution, data compression, feature extraction, frequency filters, geometric operations, non-linear filters and spatial filters.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Image_synthesis_services -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Image_synthesis_services">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Image_processing_service"/>
+        <rdfs:comment>services to create or transform images using computerized spatial models using computerized spatial models, perspective transformations, and image feature manipulations to improve visibility and resolution and/or reduce the effects of cloud cover or haze.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Interpolation_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Interpolation_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Sampling_service_spatial_aspect"/>
+        <rdfs:comment>Example: Interpolates a surface from points using a minimum curvature spline technique.
+
+Example 2: Interpolates a hydrologically correct surface from point, line and polygon data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Itinerary_determination_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Itinerary_determination_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect"/>
+        <rdfs:comment>service to determine the optimal route between two given points.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Logical_processing_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Logical_processing_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Mathematical_processing_service"/>
+        <rdfs:comment>Example : service that performs a boolean AND operation on the cell values of two input rasters.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Map_access_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Map_access_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_services_for_model_and_geographic_information_management"/>
+        <rdfs:comment>service that allows the client to access geographic graphics, i.e., representations of geographic data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Mathematical_processing_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Mathematical_processing_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Image_manipulation_services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Messaging_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Messaging_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_communication_services"/>
+        <rdfs:comment>service that allows multiple users to simultaneously view and comment on feature compilations and request revisions. This service allows a compilation involving geographic data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Metadata_search_services -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Metadata_search_services">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_service_with_human_interaction_limiting_interaction"/>
+        <rdfs:comment>Metadata search service</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Modification_detection_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Modification_detection_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_temporal_aspect"/>
+        <rdfs:comment>service to detect differences between two data sets representing the same geographical area at different times</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Multi-band_image_manipulation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Multi-band_image_manipulation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Image_manipulation_services"/>
+        <rdfs:comment>service that allows you to modify an image using the different spectral bands of the image. Examples include proportional modification, principal component transformation, color space transformation in intensity, hue or saturation and decorrelation stretching.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#NERC_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#NERC_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geosemantic_analysis_service"/>
+        <rdfs:comment>Named entity recognition and spatial classification service.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Neighborhood_calculation_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Neighborhood_calculation_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Proximity_Analysis_Service"/>
+        <rdfs:comment>Example 1: Computes statistics on the attributes of the rows in a circular neighborhood around each output cell
+
+Example 2: Determines the flow of values in the input raster in the immediate neighborhood of each cell.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Object_detection_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Object_detection_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Image_processing_service"/>
+        <rdfs:comment>service to detect real world objects in an image.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Order_management_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Order_management_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_services_for_model_and_geographic_information_management"/>
+        <rdfs:comment>A service that allows customers to order products from a supplier, including quoting orders, selecting fulfillment options, submitting an order, viewing order status, and billing and accounting for user orders.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Orthorectification_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Orthorectification_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect"/>
+        <rdfs:comment>rectification service that eliminates the image shift due to the terrain
+of the terrain. Orthorectification requires the use of digital relief data, usually in the form of a grid.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#POS_Treatment_Services -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#POS_Treatment_Services">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_annotation_service"/>
+        <rdfs:comment>Morphosyntactic service.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Positioning_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Positioning_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect"/>
+        <rdfs:comment>service provided by a geopositioning device, allowing to use, obtain and interpret unambiguously information concerning the position, as well as to determine if the results meet the requirements for use.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Product_access_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Product_access_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_services_for_model_and_geographic_information_management"/>
+        <rdfs:comment>service that allows access to and management of a store of geographic products. A product can be a predefined compilation of features and metadata with known content and boundaries, corresponding to a map or a paper report.
+Alternatively, a product can be a previously defined set of coverages with associated metadata.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Proximity_Analysis_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Proximity_Analysis_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect"/>
+        <rdfs:comment>For exemple for a given position or geographical entity. For example a service that finds all objects with a specific set of attributes that are located within a user-defined distance from the position or entity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Raster_creation_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Raster_creation_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_thematic_aspect"/>
+        <rdfs:comment>Example: a service that creates a raster of random values with a normal distribution cell by cell.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Reclass_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Reclass_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_thematic_aspect"/>
+        <rdfs:comment>Example: service that cuts a range of values of input cells of a raster by zones of the same interval, of the same zone.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Rectification_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Rectification_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect"/>
+        <rdfs:comment>service allowing to transform an image into a parallel or perpendicular projection on a surface or on a plane. The plane is often horizontal, but it can be tilted to set up certain desired conditions, such as to better match the relevant surface of the Earth.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Register_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Register_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_services_for_model_and_geographic_information_management"/>
+        <owl:backwardCompatibleWith>service that provides access to a metadata store of types. Types are vocabularies that can be organized and linked to each other. Examples of registries are information community registries, type dictionaries, service registries and schema registries.</owl:backwardCompatibleWith>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Remote_file_and_executable_management -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Remote_file_and_executable_management">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_communication_services"/>
+        <rdfs:comment>service allowing the client to access a remote storage of geographic features as if it were a local resource.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Resolution_reduction_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Resolution_reduction_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Image_processing_service"/>
+        <rdfs:comment>service to reduce the resolution of an image</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Reverse_geocoding_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Reverse_geocoding_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geocoding_service"/>
+        <rdfs:comment>service allowing to find references to places in texts by indicating their geographical coordinates.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Sampling_service_spatial_aspect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Sampling_service_spatial_aspect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect"/>
+        <rdfs:comment>service allowing to extract data by means of a coherent sampling system consistent sampling system, either by geographic location or from a coordinate grid.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Sensor_coverage_access_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Sensor_coverage_access_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Coverage_Access_Service"/>
+        <rdfs:comment>service that provides access to coverage when the source of the coverage data is a real-time sensor, i.e. not a persistent store.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Sensor_description_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Sensor_description_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_services_for_model_and_geographic_information_management"/>
+        <rdfs:comment>service providing the description of the coverage sensors, including the position and orientation of the sensors as well as their geometric, dynamic and radiometric characteristics for geographic processing purposes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Spatial_counting_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Spatial_counting_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_thematic_aspect"/>
+        <rdfs:comment>service allowing to count geographical entities of a given type in a specified zone.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Subassembly_definition_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Subassembly_definition_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_thematic_aspect"/>
+        <rdfs:comment>Service to extract entities including coverage items from a larger from a larger set based on thematic features.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Subscription_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Subscription_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Workflow/geographic_tasking_management_services"/>
+        <rdfs:comment>service that allows customers to sign up to be notified of events. Events are defined by a service that performs an activity leading to the event. Events are catalogued by the subscription service. Customers identify events of interest, such as the receipt of data over a specific geographic area. When an event occurs, the subscription service sends a notification to all notification to all clients who have registered as being interested in the event. Once an event occurs, a subscription service can cause an activity to be performed, such as the delivery of a product. delivery of a product.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Temporal_Proximity_Analysis_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Temporal_Proximity_Analysis_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_temporal_aspect"/>
+        <rdfs:comment>service that, for a given time interval or event, finds all objects with a specific set of attributes located within a user-defined range of the interval]e or event.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Temporal_aspect_sampling_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Temporal_aspect_sampling_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_temporal_aspect"/>
+        <rdfs:comment>service to extract data from an input by means of a coherent sampling by means of a coherent sampling system based on the temporal position values</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Temporal_reference_system_transformation_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Temporal_reference_system_transformation_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_temporal_aspect"/>
+        <rdfs:comment>service to change the values of time instances from one time reference system to another time reference system.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Thematic_classification_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Thematic_classification_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_thematic_aspect"/>
+        <rdfs:comment>service to classify geographic data areas based on thematic attributes. Coverage classification (especially of images) subdivides a coverage of regions on the basis of attribute values. Feature classifications sort features into groups on the basis of attribute values or feature associations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Transfer_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Transfer_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_communication_services"/>
+        <rdfs:comment>service that allows the implementation of one or more transfer protocols, which enables the transfer of data between distributed information systems via offline or online communication means. In order to successfully transfer data between the two systems, the sender and receiver need to agree on the transfer protocol to be used.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Trigonometric_processing_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Trigonometric_processing_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Mathematical_processing_service"/>
+        <owl:backwardCompatibleWith>Calculates the cosine of the cells of a raster.</owl:backwardCompatibleWith>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Waiting_order_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Waiting_order_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_services_for_model_and_geographic_information_management"/>
+        <rdfs:comment>An order management service that allows the user to request that a product covering a specific geographic area be broadcast as soon as it becomes available. This dissemination includes receiving, preparing (i.e. reformatting, compressing, decompressing, etc.), prioritizing, and transmitting the requested geographic information through requests or permanent profiles.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Workflow_control_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Workflow_control_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Workflow/geographic_tasking_management_services"/>
+        <rdfs:comment>The workflow control service interprets a chain and controls the execution of services and the sequencing of activities. This is done through one or more cooperating workflow management engines, which manage the execution of individual instances of different services. A workflow control service maintains the centralization or distribution of control data across the workflow engines. Workflow control data includes internal state information associated with the various running services and may also include checkpoint and recovery/restart information used by the workflow engines to coordinate and recover from failures.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Zone_treatment_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Zone_treatment_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_thematic_aspect"/>
+        <rdfs:comment>Example: Fills in areas using the minimum cell value of a weighting raster along the area boundary.
+
+Example2: Calculates for each area of a dataset the measure of the specified geometry (area, perimeter, thickness or ellipse characteristics).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Aspect/Contour/Curvature_manipulation_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Aspect/Contour/Curvature_manipulation_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Coverage/vector_conversion_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Coverage/vector_conversion_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geographic_processing_service_spatial_aspect"/>
+        <rdfs:comment>service to change the spatial representation for example from a coverage scheme to a vector scheme or vice versa.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geogaphic_service_(GS) -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geogaphic_service_(GS)">
+        <rdfs:comment>Services related to the geospatial domain.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Isochron/isodistance_calculation_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Isochron/isodistance_calculation_service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Proximity_Analysis_Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Workflow/geographic_tasking_management_services -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Workflow/geographic_tasking_management_services">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Geogaphic_service_(GS)"/>
+        <rdfs:comment>Services that enable specific tasks or work-related activities to be performed by humans. These services enable the use of resources and the development of products involving a sequence of activities or steps that can be performed by different people.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:ProcessOfferings xmlns:wps="http://www.opengis.net/wps/2.0.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/2.0.0 ../wpsDescribeProcess.xsd">
+   <wps:ProcessOffering outputTransmission="value reference">
+      <wps:Process>
+         <ows:Identifier>NaturalNeighbor</ows:Identifier>
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/process-profile/concept_functionality" xlink:href="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Interpolation_service" />
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/ def/process/description/documentation" xlink:href="https://52north.org/" />
+         <ows:Title>NaturalNeighbor_sa</ows:Title>
+         <ows:Abstract>Interpolates a surface from points using a natural neighbor technique. Uses ArcObjects library - Spatial Analyst</ows:Abstract>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>in_point_features</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZValue" />
+            <ows:Title>in point features</ows:Title>
+            <ows:Abstract>The input point features containing the z-values to be interpolated into a surface raster.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/x-zipped-shape" default="true" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>z_field</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZField" />
+            <ows:Title>z field</ows:Title>
+            <ows:Abstract>Field that holds a height or magnitude value for each point. This can be a numeric field or the Shape field if the Input point features contain z-values.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#string">String</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>cell_size</ows:Identifier>
+            <ows:Title>cell size</ows:Title>
+            <ows:Abstract>The cell size at which the output raster will be created. This will be the value in the Environment if it is explicitly set. Otherwise, it is the shorter of the width or the height of the extent of in_point_features in the input spatial reference, divided by 250.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#double">Double</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Output>
+            <ows:Identifier>out_raster</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#NaturalNeighbor" />
+            <ows:Title>out raster</ows:Title>
+            <ows:Abstract>The output raster surface to be created.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Output>
+         <ows:Metadata xlink:role="http://choucas.ign.fr/spec/wps /2.0/def/process-profile/Non-functional_properties" xlink:href="./NonFunctional_Description/NFNaturalNeighbor.xml" />
+      </wps:Process>
+   </wps:ProcessOffering>
+</wps:ProcessOfferings>

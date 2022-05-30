@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:ProcessOfferings xmlns:wps="http://www.opengis.net/wps/2.0.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/2.0.0 ../wpsDescribeProcess.xsd">
+   <wps:ProcessOffering outputTransmission="value reference">
+      <wps:Process>
+         <ows:Identifier>ExtractValuesToPoints</ows:Identifier>
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/process-profile/concept_functionality" xlink:href="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Subassembly_definition_service" />
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/ def/process/description/documentation" xlink:href="https://52north.org/" />
+         <ows:Title>ExtractValuesToPoints_sa</ows:Title>
+         <ows:Abstract>Extracts the cell values of a raster based on a set of points. Uses ArcObjects library - Spatial Analyst</ows:Abstract>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>in_point_feature</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PointFeature" />
+            <ows:Title>in point feature</ows:Title>
+            <ows:Abstract>The input point features to which you want to add raster values.</ows:Abstract>
+            <ComplexData>
+               <Default>
+                  <Format>
+                     <MimeType>application/x-zipped-shp</MimeType>
+                     <Schema />
+                  </Format>
+               </Default>
+               <Supported>
+                  <Format>
+                     <MimeType>application/x-zipped-shp</MimeType>
+                     <Schema />
+                  </Format>
+               </Supported>
+            </ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>in_raster</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Raster" />
+            <ows:Title>in raster</ows:Title>
+            <ows:Abstract>The name of a raster dataset whose values you want to add to the input point features.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>interpolate_values</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Interpolatie" />
+            <ows:Title>interpolatie values</ows:Title>
+            <ows:Abstract>Specifies whether or not interpolation will be used. NONE  — No interpolation will be applied; the value of the cell center will be used. INTERPOLATE  — The value of the cell will be calculated from the adjacent cells with valid values using bilinear interpolation. NoData values will be ignored in the interpolation unless all adjacent cells are NoData.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#boolean">Boolean</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>add_attributes</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#InterpolationAttributes" />
+            <ows:Title>interpolation as boolean</ows:Title>
+            <ows:Abstract>Determines if the raster attributes are written to the output point feature dataset. VALUE_ONLY  — Only the value of the input raster is added to the point attributes. This is the default. ALL  — All the fields from the input raster (except Count) will be added to the point attributes.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#boolean">Boolean</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Output>
+            <ows:Identifier>out_point_feature</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ExtractionValuesToPoints" />
+            <ows:Title>out point feature</ows:Title>
+            <ows:Abstract>The output point feature dataset containing the extracted raster values.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/x-zipped-shape" default="true" />
+            </wps:ComplexData>
+         </wps:Output>
+         <ows:Metadata xlink:role="http://choucas.ign.fr/spec/wps /2.0/def/process-profile/Non-functional_properties" xlink:href="./NonFunctional_Description/NFExtractValuesToPoints.xml" />
+      </wps:Process>
+   </wps:ProcessOffering>
+</wps:ProcessOfferings>

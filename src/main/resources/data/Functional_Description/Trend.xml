@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:ProcessOfferings xmlns:wps="http://www.opengis.net/wps/2.0.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/2.0.0 ../wpsDescribeProcess.xsd">
+   <wps:ProcessOffering outputTransmission="value reference">
+      <wps:Process>
+         <ows:Identifier>Trend</ows:Identifier>
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/process-profile/concept_functionality" xlink:href="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Interpolation_service" />
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/ def/process/description/documentation" xlink:href="https://52north.org/" />
+         <ows:Title>Trend_sa</ows:Title>
+         <ows:Abstract>Interpolates a surface from points using a trend technique. Uses ArcObjects library - Spatial Analyst</ows:Abstract>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>in_point_features</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZValue" />
+            <ows:Title>in point features</ows:Title>
+            <ows:Abstract>The input point features containing z-values to be interpolated into a surface raster.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/x-zipped-shape" default="true" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>z_field</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZField" />
+            <ows:Title>z field</ows:Title>
+            <ows:Abstract>Field that holds a height or magnitude value for each point. This can be a numeric field, or the Shape field if the in_point_features contain z-values. If the regression type is Logistic, the values in the field can only be 0 or 1.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#string">String</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>cell_size</ows:Identifier>
+            <ows:Title>cell size</ows:Title>
+            <ows:Abstract>The cell size at which the output raster will be created. This will be the value in the environment if it is explicitly set. Otherwise, it is the shorter of the width or the height of the extent of in_point_features, in the input spatial reference, divided by 250.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#double">Double</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>order</ows:Identifier>
+            <ows:Title>order</ows:Title>
+            <ows:Abstract>The order of the polynomial. This must be an integer between 1 and 12. A value of 1 will fit a flat plane to the points, and a higher value will fit a more complex surface. The default is 1.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#integer">Integer</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>regression_type</ows:Identifier>
+            <ows:Title>regression type</ows:Title>
+            <ows:Abstract>The type of regression to be performed. LINEAR  — Polynomial regression is performed to fit a least-squares surface to the set of input points. This is applicable for continuous types of data. LOGISTIC  — Logistic trend surface analysis is performed. It generates a continuous probability surface for binary, or dichotomous, types of data.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AllowedValues>
+                     <ows:Value>LINEAR</ows:Value>
+                     <ows:Value>LOGISTIC</ows:Value>
+                  </ows:AllowedValues>
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#string">String</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Output>
+            <ows:Identifier>out_raster</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Trend" />
+            <ows:Title>out raster</ows:Title>
+            <ows:Abstract>The output raster surface to be created.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Output>
+         <wps:Output>
+            <ows:Identifier>out_rms_file</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RMS" />
+            <ows:Title>out rms file</ows:Title>
+            <ows:Abstract>Filename for the output text file that contains information about the RMS error and the Chi-Square of the interpolation. The extension must be ".txt".</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/txt" default="true" />
+            </wps:ComplexData>
+         </wps:Output>
+         <ows:Metadata xlink:role="http://choucas.ign.fr/spec/wps /2.0/def/process-profile/Non-functional_properties" xlink:href="./NonFunctional_Description/NFTrend.xml" />
+      </wps:Process>
+   </wps:ProcessOffering>
+</wps:ProcessOfferings>

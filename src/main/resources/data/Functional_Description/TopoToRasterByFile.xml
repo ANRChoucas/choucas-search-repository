@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:ProcessOfferings xmlns:wps="http://www.opengis.net/wps/2.0.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/2.0.0 ../wpsDescribeProcess.xsd">
+   <wps:ProcessOffering outputTransmission="value reference">
+      <wps:Process>
+         <ows:Identifier>TopoToRasterByFile</ows:Identifier>
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/process-profile/concept_functionality" xlink:href="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Interpolation_service" />
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/ def/process/description/documentation" xlink:href="https://52north.org/" />
+         <ows:Title>TopoToRasterByFile_sa</ows:Title>
+         <ows:Abstract>Interpolates a hydrologically correct surface from point, line, and polygon data using parameters specified in a file. Uses ArcObjects library - Spatial Analyst</ows:Abstract>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>in_parameter_file</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ParameterSummary" />
+            <ows:Title>in parameter file</ows:Title>
+            <ows:Abstract>The input text file containing the inputs and parameters to use for the interpolation. The file is typically originally created from a previous run of Topo to Raster with the optional output parameter file specified. In order to test the outcome of changing the parameters, it is easier to make edits to this file and re-run the interpolation than to correctly issue the Topo to Raster tool each time.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/txt" default="true" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Output>
+            <ows:Identifier>output_surface_raster</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Surface" />
+            <ows:Title>output surface raster</ows:Title>
+            <ows:Abstract>The output raster surface to be created.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Output>
+         <wps:Output>
+            <ows:Identifier>out_stream_features</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#StreamFeatures" />
+            <ows:Title>out stream features</ows:Title>
+            <ows:Abstract>Output feature class of stream polyline features.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/x-zipped-shape" default="true" />
+            </wps:ComplexData>
+         </wps:Output>
+         <wps:Output>
+            <ows:Identifier>out_sink_features</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SinkFeatures" />
+            <ows:Title>out sink features</ows:Title>
+            <ows:Abstract>Output feature class of remaining sink point features.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/x-zipped-shape" default="true" />
+            </wps:ComplexData>
+         </wps:Output>
+         <ows:Metadata xlink:role="http://choucas.ign.fr/spec/wps /2.0/def/process-profile/Non-functional_properties" xlink:href="./NonFunctional_Description/NFTopoToRasterByFile.xml" />
+      </wps:Process>
+   </wps:ProcessOffering>
+</wps:ProcessOfferings>

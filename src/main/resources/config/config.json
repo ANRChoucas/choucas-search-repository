@@ -1,0 +1,5 @@
+{
+  "TITLE": "Choucas service search engine",
+  "DATA_PATH": ".\\src\\main\\resources\\config\\",
+  "SERVER": "http://localhost:8080"
+}

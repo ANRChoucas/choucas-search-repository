@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:ProcessOfferings xmlns:wps="http://www.opengis.net/wps/2.0.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/2.0.0 ../wpsDescribeProcess.xsd">
+   <wps:ProcessOffering outputTransmission="value reference">
+      <wps:Process>
+         <ows:Identifier>LineDensity</ows:Identifier>
+         <ows:Title>LineDensity_sa</ows:Title>
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/process-profile/concept_functionality" xlink:href="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Density_calculation_service" />
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/ def/process/description/documentation" xlink:href="https://52north.org/" />
+         <ows:Abstract>Calculates a magnitude per unit area from polyline features that fall within a radius around each cell. Uses ArcObjects library - Spatial Analyst</ows:Abstract>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>input features</ows:Identifier>
+            <ows:Title>input polyline features</ows:Title>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultiLineString" />
+            <ows:Abstract>the input polyline feature to calculate the density for</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/x-zipped-shp" default="true" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>field</ows:Identifier>
+            <ows:Title>population field as string</ows:Title>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PopulationField" />
+            <ows:Abstract>Field denoting population values for each feature. the population field is the count or quantity to be spread across the landscape to create continuous surface. values may be integer or floating point. a valid field name of the input features is required.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#string">String</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>cell size</ows:Identifier>
+            <ows:Title>output cell size</ows:Title>
+            <ows:Abstract>The cell size at which the output raster will be created. If the environment is not set, then cell size is the shorter of the width or height of the extent of input point or polyline features in the output spatial reference, divided by 250.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#double">Double</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>radius</ows:Identifier>
+            <ows:Title>search radius</ows:Title>
+            <ows:Abstract>The search radius within which to calculate density. Units are based on the linear unit of the projection of the output spatial reference. The default is the shortest of the width or height of the extent of in_features in the output spatial reference, divided by 30.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#double">Double</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>units</ows:Identifier>
+            <ows:Title>area units</ows:Title>
+            <ows:Abstract>The desired area units of the output density values. the value can be "SQUARE_MAP_UNITS", "SQUARE_MILES", "SQUARE_KILOMETERS","SQUARE_INCHES", "SQUARE_CENTIMETERS" or "SQUARE_MILLIMETERS". A default unit is selected based on the linear unit of the projection of the output spatial reference.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AllowedValues>
+                     <ows:Value>SQUARE_MAP_UNITS</ows:Value>
+                     <ows:Value>SQUARE_MILES</ows:Value>
+                     <ows:Value>SQUARE_KILOMETERS</ows:Value>
+                     <ows:Value>SQUARE_INCHES</ows:Value>
+                     <ows:Value>SQUARE_CENTIMETERS</ows:Value>
+                     <ows:Value>SQUARE_MILLIMETERS</ows:Value>
+                  </ows:AllowedValues>
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#string">String</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Output>
+            <ows:Identifier>result</ows:Identifier>
+            <ows:Title>raster values</ows:Title>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LineDensity" />
+            <ows:Abstract>result raster</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Output>
+         <ows:Metadata xlink:role="http://choucas.ign.fr/spec/wps /2.0/def/process-profile/Non-functional_properties" xlink:href="./NonFunctional_Description/NFLineDensity.xml" />
+      </wps:Process>
+   </wps:ProcessOffering>
+</wps:ProcessOfferings>

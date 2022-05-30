@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:ProcessOfferings xmlns:wps="http://www.opengis.net/wps/2.0.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/2.0.0 ../wpsDescribeProcess.xsd">
+   <wps:ProcessOffering outputTransmission="value reference">
+      <wps:Process>
+         <ows:Identifier>CellStatistics</ows:Identifier>
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/process-profile/concept_functionality" xlink:href="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Calculation_statistics_service" />
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/ def/process/description/documentation" xlink:href="https://52north.org/" />
+         <ows:Title>CellStatistics_sa</ows:Title>
+         <ows:Abstract>Calculates a per-cell statistics from multiple rasters. Uses ArcObjects library - Spatial Analyst</ows:Abstract>
+         <wps:Input minOccurs="2" maxOccurs="1000">
+            <ows:Identifier>in_rasters_or_constants</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ArgumentRaster" />
+            <ows:Title>in rasters or constants</ows:Title>
+            <ows:Abstract>A list of input rasters for which a statistic will be calculated for each cell within the Analysis window. A number can be input as an argument, but it will be converted to a raster at the current window and cell size set in the analysis environment, with each location containing the input number.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>MEAN | MAJORITY | MAXIMUM | MEDIAN | MINIMUM | MINORITY | RANGE | STD | SUM | VARIETY</ows:Identifier>
+            <ows:Title>MEAN | MAJORITY | MAXIMUM | MEDIAN | MINIMUM | MINORITY | RANGE | STD | SUM | VARIETY</ows:Title>
+            <ows:Abstract>Statistic type to be calculated.
+					MEAN  — Calculates the mean (average) of the inputs.
+					MAJORITY  — Calculates the majority (value that occurs most often) of the inputs.
+					MAXIMUM  — Calculates the maximum (largest value) of the inputs.
+					MEDIAN  — Calculates the median of the inputs.
+					MINIMUM  — Calculates the minimum (smallest value) of the inputs.
+					MINORITY  — Calculates the minority (value that occurs least often) of the inputs.
+					RANGE  — Calculates the range (difference between largest and smallest value) of the inputs.
+					STD  — Calculates the standard deviation of the inputs.
+					SUM  — Calculates the sum (total of all values) of the inputs.
+					VARIETY  — Calculates the variety (number of unique values) of the inputs.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AllowedValues>
+                     <ows:Value>MEAN</ows:Value>
+                     <ows:Value>MAJORITY</ows:Value>
+                     <ows:Value>MAXIMUM</ows:Value>
+                     <ows:Value>MEDIAN</ows:Value>
+                     <ows:Value>MINIMUM</ows:Value>
+                     <ows:Value>MINORITY</ows:Value>
+                     <ows:Value>RANGE</ows:Value>
+                  </ows:AllowedValues>
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#string">String</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Output>
+            <ows:Identifier>out_raster</ows:Identifier>
+            <!-- 1 -->
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PerCellStatistics" />
+            <ows:Title>out raster</ows:Title>
+            <ows:Abstract>The raster to be created.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Output>
+         <ows:Metadata xlink:role="http://choucas.ign.fr/spec/wps /2.0/def/process-profile/Non-functional_properties" xlink:href="./NonFunctional_Description/NFCellStatistics.xml" />
+      </wps:Process>
+   </wps:ProcessOffering>
+</wps:ProcessOfferings>

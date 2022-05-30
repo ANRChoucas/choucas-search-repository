@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:ProcessOfferings xmlns:wps="http://www.opengis.net/wps/2.0.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/2.0.0 ../wpsDescribeProcess.xsd">
+   <wps:ProcessOffering outputTransmission="value reference">
+      <wps:Process>
+         <ows:Identifier>CostPath</ows:Identifier>
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/process-profile/concept_functionality" xlink:href="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Distance_path_calculation_service" />
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/ def/process/description/documentation" xlink:href="https://52north.org/" />
+         <ows:Title>CostPath_sa</ows:Title>
+         <ows:Abstract>Calculates the least-cost path from a source to a destination. Uses ArcObjects library - Spatial Analyst</ows:Abstract>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>in_destination_data</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#DestinationLocation" />
+            <ows:Title>in destination data</ows:Title>
+            <ows:Abstract>A raster or feature dataset that identifies those cells from which the least-cost path is determined to the least costly source. If the input is a raster, the input consists of cells that have valid values (zero is a valid value), and the remaining cells must be assigned NoData.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/x-zipped-shape" default="true" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>destination_field</ows:Identifier>
+            <ows:Title>destination field</ows:Title>
+            <ows:Abstract>The field used to obtain values for the destination locations. Input feature data must contain at least one valid field.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#string">String</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>in_cost_distance_raster</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CostDistance" />
+            <ows:Title>in cost distance raster</ows:Title>
+            <ows:Abstract>The name of a cost distance raster used to determine the least-cost path from the in_destination_data cell locations to a source. The in_cost_distance_raster is usually created with the CostDistance function (or by the CostAllocation or CostBackLink functions). The in_cost_distance_raster stores, for each cell, the minimum accumulative cost distance over a cost surface from each cell to a set of source cells.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+            s
+         </wps:Input>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>in cost backlink raster</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CostBackLink" />
+            <ows:Title>in cost backlink raster</ows:Title>
+            <ows:Abstract>The name of a cost backlink raster used to determine the path to return to a source via the least-cost path. For each cell in the backlink raster, a value identifies the neighbor that is the next cell on the least accumulative cost path from the cell to a single source cell or set of source cells.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>path_type</ows:Identifier>
+            <ows:Title>path type</ows:Title>
+            <ows:Abstract>A keyword defining the manner in which the values and zones on the in_destination_data will be interpreted in the cost path calculations. EACH_CELL  — For each cell with valid values on the in_destination_data, a least-cost path is determined and saved on the output raster of the CostPath function. With EACH_CELL, each cell of the in_destination_data input is treated separately, and a least-cost path is determined for each from cell. EACH_ZONE  — For each zone on the in_destination_data , a least-cost path is determined and saved on the output raster of the CostPath function. With the EACH_ZONE keyword, the least-cost path for each zone begins at the cell with the lowest cost distance weighting in the zone. BEST_SINGLE  — For all cells on the in_destination_data input, the least-cost path is derived from the cell with the minimum of the least-cost paths to source cells.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AllowedValues>
+                     <ows:Value>EACH_CELL</ows:Value>
+                     <ows:Value>EACH_ZONE</ows:Value>
+                     <ows:Value>BEST_SINGLE</ows:Value>
+                  </ows:AllowedValues>
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#string">String</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Output>
+            <ows:Identifier>out_raster</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#CostPath" />
+            <ows:Title>out raster</ows:Title>
+            <ows:Abstract>The raster to be created.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Output>
+         <ows:Metadata xlink:role="http://choucas.ign.fr/spec/wps /2.0/def/process-profile/Non-functional_properties" xlink:href="./NonFunctional_Description/NFCostPath.xml" />
+      </wps:Process>
+   </wps:ProcessOffering>
+</wps:ProcessOfferings>

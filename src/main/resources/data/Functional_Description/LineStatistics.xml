@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:ProcessOfferings xmlns:wps="http://www.opengis.net/wps/2.0.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/2.0.0 ../wpsDescribeProcess.xsd">
+   <wps:ProcessOffering outputTransmission="value reference">
+      <wps:Process>
+         <ows:Identifier>LineStatistics</ows:Identifier>
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/process-profile/concept_functionality" xlink:href="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Neighborhood_calculation_service" />
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/ def/process/description/documentation" xlink:href="https://52north.org/" />
+         <ows:Title>LineStatistics_sa</ows:Title>
+         <ows:Abstract>Calculates a statistic on the attributes of lines in a circular neighborhood around each output cell. Uses ArcObjects library - Spatial Analyst</ows:Abstract>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>in_polyline_feature</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#PolylineFeatureLineStasctics" />
+            <ows:Title>in polyline feature</ows:Title>
+            <ows:Abstract>The input polyline features to calculate the Line Statistics for.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/x-zipped-shape" default="true" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>field</ows:Identifier>
+            <ows:Title>field</ows:Title>
+            <ows:Abstract>Field can be any numeric field of in_polyline_features. Field can be the shape field if in_polyline_features contains z.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#string">String</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>cell_size</ows:Identifier>
+            <ows:Title>cell size</ows:Title>
+            <ows:Abstract>Cell size for output raster dataset. This is the value in the environment if specifically set. If not set in the environment, it is the shorter of the width or height of the extent of in_polyline_features in the output spatial reference, divided by 250.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#double">Double</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>search_radius</ows:Identifier>
+            <ows:Title>search radius</ows:Title>
+            <ows:Abstract>Search radius to calculate the desired statistic within, in map units. The default radius is five times the output cell size.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#double">Double</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>statistics_type</ows:Identifier>
+            <ows:Title>statistics type</ows:Title>
+            <ows:Abstract>The Statistic type to be calculated.
+				Statistics are calculated on the value of the specified "field" for all lines in the neighborhood. MEAN  — The average value, weighted by the length. Mean = (sum of (length * field-value)) / (sum of length). Only the part of the length that falls within the neighborhood is used. MAJORITY  — The value having the greatest length of line in the neighborhood. MAXIMUM — The largest value. MEDIAN  — The median value, weighted by the length. Conceptually, all line segments in the neighborhood are sorted by value and placed end-to-end in a straight line. The value of the segment at the midpoint of the straight line is the median. MINIMUM  — The smallest value. MINORITY  — The value having the least length of line in the neighborhood. RANGE  — The range of values (maximum – minimum). STD  — The standard deviation of the values. VARIETY  — The number of unique values.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AllowedValues>
+                     <ows:Value>MEAN</ows:Value>
+                     <ows:Value>MAJORITY</ows:Value>
+                     <ows:Value>MAXIMUM</ows:Value>
+                     <ows:Value>MEDIAN</ows:Value>
+                     <ows:Value>MINIMUM</ows:Value>
+                     <ows:Value>MINORITY</ows:Value>
+                     <ows:Value>RANGE</ows:Value>
+                     <ows:Value>STD</ows:Value>
+                     <ows:Value>VARIETY</ows:Value>
+                  </ows:AllowedValues>
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#string">String</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Output>
+            <ows:Identifier>out_raster</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#LineStatistics" />
+            <ows:Title>out raster</ows:Title>
+            <ows:Abstract>The raster to be created.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Output>
+         <ows:Metadata xlink:role="http://choucas.ign.fr/spec/wps /2.0/def/process-profile/Non-functional_properties" xlink:href="./NonFunctional_Description/NFLineStatistics.xml" />
+      </wps:Process>
+   </wps:ProcessOffering>
+</wps:ProcessOfferings>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:ProcessOfferings xmlns:wps="http://www.opengis.net/wps/2.0.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/2.0.0 ../wpsDescribeProcess.xsd">
+   <wps:ProcessOffering outputTransmission="value reference">
+      <wps:Process>
+         <ows:Identifier>ClassProbability</ows:Identifier>
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/process-profile/concept_functionality" xlink:href="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Calculation_statistics_service" />
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/ def/process/description/documentation" xlink:href="https://52north.org/" />
+         <ows:Title>ClassProbability_sa</ows:Title>
+         <ows:Abstract>Creates probability layers for each class in a signature file. Uses ArcObjects library - Spatial Analyst</ows:Abstract>
+         <wps:Input minOccurs="1" maxOccurs="1000">
+            <ows:Identifier>in_raster_bands</ows:Identifier>
+            
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#RasterBands" />
+            <ows:Title>in raster bands</ows:Title>
+            <ows:Abstract>Input raster bands. Raster bands can be integer or floating point.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>in_signature_file</ows:Identifier>
+           
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Signature" />
+            <ows:Title>in signature file</ows:Title>
+            <ows:Abstract>Input signature file whose class signatures are used to generate the a priori probability layers. A ".gsg" extension is required.</ows:Abstract>
+            <ComplexData>
+               <Default>
+                  <Format>
+                     <MimeType>application/txt</MimeType>
+                     <Schema />
+                  </Format>
+               </Default>
+               <Supported>
+                  <Format>
+                     <MimeType>application/txt</MimeType>
+                     <Schema />
+                  </Format>
+               </Supported>
+            </ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>maximum_output_value</ows:Identifier>
+            <ows:Title>maximum output value</ows:Title>
+            <ows:Abstract>Factor for scaling the range of values in the output probability layers. By default, the values range from 0 to 100.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#integer">Integer</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>a_priori_probabilities</ows:Identifier>
+            <ows:Title>a priori probabilities</ows:Title>
+            <ows:Abstract>Specifies how a priori probabilities will be determined. EQUAL  — All classes will have the same a priori probability. SAMPLE  — A priori probabilities will be proportional to the number of cells in each class relative to the total number of cells sampled in all classes in the signature file. FILE  — A priori probabilities will be assigned to each class from an input a priori probability file.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AllowedValues>
+                     <ows:Value>EQUAL</ows:Value>
+                     <ows:Value>FILE</ows:Value>
+                     <ows:Value>SAMPLE</ows:Value>
+                  </ows:AllowedValues>
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#string">String</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>in_a_priori_file</ows:Identifier>
+            <ows:Title>in a priori file</ows:Title>
+            <ows:Abstract>A text file containing a priori probabilities for the input signature classes. An input for the a priori probability file is only required when the FILE option is used. The extension for the a priori file can be ".txt" or ".asc".</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/txt" default="true" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Output>
+            <ows:Identifier>out_multiband_raster</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#MultibandRaster" />
+            <ows:Title>out multiband raster</ows:Title>
+            <ows:Abstract>The output multiband raster dataset. The dataset filename must have less than 10 characters.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Output>
+         <ows:Metadata xlink:role="http://choucas.ign.fr/spec/wps /2.0/def/process-profile/Non-functional_properties" xlink:href="./NonFunctional_Description/NFClassProbability.xml" />
+      </wps:Process>
+   </wps:ProcessOffering>
+</wps:ProcessOfferings>

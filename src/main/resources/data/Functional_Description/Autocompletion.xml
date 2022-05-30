@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:ProcessOfferings xmlns:wps="http://www.opengis.net/wps/2.0.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/2.0.0 ../wpsDescribeProcess.xsd">
+   <wps:ProcessOffering outputTransmission="value reference">
+      <wps:Process>
+         <ows:Identifier>Autocompletion</ows:Identifier>
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/process-profile/concept_functionality" xlink:href="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Autocompletion_service" />
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/  def/process/description/documentation" xlink:href="https://geoservices.ign.fr/documentation/geoservices/autocompletion.html" />
+         <ows:Title>Autocompletion</ows:Title>
+         <ows:Abstract>The autocompletion service is designed to suggest a probable locator as you enter addresses.</ows:Abstract>
+         <wps:Input minOccurs="1">
+            <ows:Title>text</ows:Title>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SpatialEntity" />
+            <ows:Abstract>A string of characters to complete.</ows:Abstract>
+            <ows:Identifier>text</ows:Identifier>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#string">String</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="0">
+            <ows:Title>api_key</ows:Title>
+            <ows:Abstract>The API Key</ows:Abstract>
+            <ows:Identifier>api_key</ows:Identifier>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#string">String</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="0">
+            <ows:Title>type</ows:Title>
+            <ows:Abstract>The type of locators searched for</ows:Abstract>
+            <ows:Identifier>type</ows:Identifier>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AllowedValues>
+                     <ows:Value>PositionOfInteres</ows:Value>
+                     <ows:Value>StreetAddress</ows:Value>
+                  </ows:AllowedValues>
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#string">String</ows:DataType>
+                  <ows:DefaultValue>PositionOfInteres</ows:DefaultValue>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="0">
+            <ows:Title>terr</ows:Title>
+            <ows:Abstract>A limitation of the search area for matching locators.</ows:Abstract>
+            <ows:Identifier>terr</ows:Identifier>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AllowedValues>
+                     <ows:Value>METROPOLE</ows:Value>
+                     <ows:Value>DOMTOM</ows:Value>
+                  </ows:AllowedValues>
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#string">String</ows:DataType>
+                  <ows:DefaultValue>METROPOLE</ows:DefaultValue>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Output>
+            <ows:Title>content</ows:Title>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Adress" />
+            <ows:Abstract>Probable locators</ows:Abstract>
+            <ows:Identifier>content</ows:Identifier>
+            <wps:ComplexData>
+               <wps:Format mimeType="application/json" encoding="UTF-8" default="true" />
+            </wps:ComplexData>
+         </wps:Output>
+         <ows:Metadata xlink:role="http://choucas.ign.fr/spec/wps /2.0/def/process-profile/Non-functional_properties" xlink:href="./NonFunctional_Description/NFAutocompletion.xml" />
+      </wps:Process>
+   </wps:ProcessOffering>
+</wps:ProcessOfferings>

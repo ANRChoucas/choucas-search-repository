@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:ProcessOfferings xmlns:wps="http://www.opengis.net/wps/2.0.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/2.0.0 ../wpsDescribeProcess.xsd">
+   <wps:ProcessOffering outputTransmission="value reference">
+      <wps:Process>
+         <ows:Identifier>Dendrogram</ows:Identifier>
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/process-profile/concept_functionality" xlink:href="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Calculation_statistics_service" />
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/ def/process/description/documentation" xlink:href="https://52north.org/" />
+         <ows:Title>Dendrogram_sa</ows:Title>
+         <ows:Abstract>Constructs a tree diagram showing attribute distances between sequentially merged classes in a signature file. Uses ArcObjects library - Spatial Analyst</ows:Abstract>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>in_signature_file</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Signature" />
+            <ows:Title>in signature file</ows:Title>
+            <ows:Abstract>Input signature file whose class signatures are used to produce a dendrogram. A ".gsg" extension is required.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/txt" default="true" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>line_width</ows:Identifier>
+            <ows:Title>line width</ows:Title>
+            <ows:Abstract>Sets the width of the dendrogram in number of characters on a line. The default is 78.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#integer">Integer</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>distance_calculation</ows:Identifier>
+            <ows:Title>distance calculation</ows:Title>
+            <ows:Abstract>Specifies the manner through which the distances between classes in the multidimensional attribute space are to be defined. If True, the distances between classes will be computed based on the variances and the Euclidean distance between the means of their signatures. If False, the distances between classes will be determined by the Euclidean distances between the means of the class signatures only.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#boolean">Boolean</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Output>
+            <ows:Identifier>out_dendogram_file</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Dendrogram" />
+            <ows:Title>out dendogram file</ows:Title>
+            <ows:Abstract>The output dendrogram ASCII file. The extension can be ".txt" or ".asc".</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/txt" default="true" />
+            </wps:ComplexData>
+         </wps:Output>
+         <ows:Metadata xlink:role="http://choucas.ign.fr/spec/wps /2.0/def/process-profile/Non-functional_properties" xlink:href="./NonFunctional_Description/NFDendrogram.xml" />
+      </wps:Process>
+   </wps:ProcessOffering>
+</wps:ProcessOfferings>

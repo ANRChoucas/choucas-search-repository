@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:ProcessOfferings xmlns:wps="http://www.opengis.net/wps/2.0.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/2.0.0 ../wpsDescribeProcess.xsd">
+   <wps:ProcessOffering outputTransmission="value reference">
+      <wps:Process>
+         <ows:Identifier>EuclideanDistance</ows:Identifier>
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/process-profile/concept_functionality" xlink:href="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Distance_calculation_service" />
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/ def/process/description/documentation" xlink:href="https://52north.org/" />
+         <ows:Title>EuclideanDistance_sa</ows:Title>
+         <ows:Abstract>Calculates, for each cell, the Euclidean distance to the closest source. Uses ArcObjects library - Spatial Analyst</ows:Abstract>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>in_source_data</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#SourceLocation" />
+            <ows:Title>in source data</ows:Title>
+            <ows:Abstract>The input source locations. A raster or feature dataset that identifies the cells or locations to which the Euclidean distance for every cell location is calculated. If raster, it must be integer type. Distance is calculated only to the single closest source cell or location.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+               <wps:Format MimeType="application/x-zipped-shape" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>maximum_distance</ows:Identifier>
+            <ows:Title>maximum distance</ows:Title>
+            <ows:Abstract>Defines the threshold that the accumulative distance values cannot exceed. If an accumulative Euclidean distance value exceeds the {maximum_distance}, the output value for the cell location will be NoData. The {maximum_distance} defines the extent for which the accumulative Euclidean distances are calculated. The default distance is to the edge of the output raster.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#integer">Integer</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>cell_size</ows:Identifier>
+            <ows:Title>cell size</ows:Title>
+            <ows:Abstract>The cell size at which the output raster will be created. This will be the value in the environment if it is explicitly set. If it's not set in the environment, and if the in_source_data is a raster, the cell size will default to that of the in_source_data. If the in_source_data is a feature dataset, the cell size will default to the shorter of the width or height of the extent of input features in the input spatial reference, divided by 250.</ows:Abstract>
+            <wps:LiteralData>
+               <wps:Format mimeType="text/plain" />
+               <LiteralDataDomain>
+                  <ows:AnyValue />
+                  <ows:DataType ows:reference="http://www.w3.org/2001/XMLSchema#double">Double</ows:DataType>
+               </LiteralDataDomain>
+            </wps:LiteralData>
+         </wps:Input>
+         <wps:Output>
+            <ows:Identifier>out_distance_raster</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#EuclideanDistance" />
+            <ows:Title>out distance raster</ows:Title>
+            <ows:Abstract>The name of the output Euclidean distance raster. The distance raster identifies, for each cell, the Euclidean distance to the closest source cell, set of source cells, or source location.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Output>
+         <wps:Output>
+            <ows:Identifier>out_direction_raster</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#EuclideanDirection" />
+            <ows:Title>out direction raster</ows:Title>
+            <ows:Abstract>The name of the output Euclidean direction raster. The direction raster contains the calculated direction, in degrees, each cell center is from the closest source cell center. The range of values is 0 to 360 degrees, with 0 reserved for the source cells. Due east (right) is 90, and the values increase clockwise (180 is south, 270 is west, and 360 is north).</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Output>
+         <ows:Metadata xlink:role="http://choucas.ign.fr/spec/wps /2.0/def/process-profile/Non-functional_properties" xlink:href="./NonFunctional_Description/NFEuclideanDistance.xml" />
+      </wps:Process>
+   </wps:ProcessOffering>
+</wps:ProcessOfferings>

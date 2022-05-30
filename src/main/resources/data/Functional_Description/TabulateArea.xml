@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:ProcessOfferings xmlns:wps="http://www.opengis.net/wps/2.0.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/2.0.0 ../wpsDescribeProcess.xsd">
+   <wps:ProcessOffering outputTransmission="value reference">
+      <wps:Process>
+         <ows:Identifier>TabulateArea</ows:Identifier>
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/process-profile/concept_functionality" xlink:href="http://www.semanticweb.org/home/ontologies/2018/6/untitled-ontology-6#Zone_treatment_service" />
+         <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/ def/process/description/documentation" xlink:href="https://52north.org/" />
+         <ows:Title>TabulateArea_sa</ows:Title>
+         <ows:Abstract>Calculates cross-tabulated areas between two datasets. Uses ArcObjects library - Spatial Analyst</ows:Abstract>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>in_zone_data</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#Zone" />
+            <ows:Title>in zone data</ows:Title>
+            <ows:Abstract>The dataset that defines the zones. The zones can be defined as an integer raster layer or a feature layer.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>zone_field</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ZoneField" />
+            <ows:Title>zone field</ows:Title>
+            <ows:Abstract>The field that holds the values that define each zone. It can be an integer or a string field of the in_zone_data.</ows:Abstract>
+            <LiteralData>
+               <ows:DataType ows:reference="xs:string" />
+               <ows:AnyValue />
+            </LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>in_class_data</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ClassData" />
+            <ows:Title>in class data</ows:Title>
+            <ows:Abstract>The dataset that defines the classes that will have their area summarized within each zone. The class input can be an integer raster layer or a feature layer.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/img" default="true" />
+               <wps:Format MimeType="application/GeoTIFF" />
+            </wps:ComplexData>
+         </wps:Input>
+         <wps:Input minOccurs="1" maxOccurs="1">
+            <ows:Identifier>class_field</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Input" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#ClassField" />
+            <ows:Title>class field</ows:Title>
+            <ows:Abstract>The field that holds the class values. It can be an integer or a string field of the in_class_data.</ows:Abstract>
+            <LiteralData>
+               <ows:DataType ows:reference="xs:string" />
+               <ows:AnyValue />
+            </LiteralData>
+         </wps:Input>
+         <wps:Input minOccurs="0" maxOccurs="1">
+            <ows:Identifier>processing_cell_size</ows:Identifier>
+            <ows:Title>processing cell size</ows:Title>
+            <ows:Abstract>The processing cell size for the operation. This is the value in the environment if specifically set. If the environment is not set and in_zone_data is raster, the cell size is the same as in_zone_data. If the environment is not set and in_zone_data is feature, the cell size is the shorter of the width or height of the extent of in_zone_data in the output spatial reference, divided by 250.</ows:Abstract>
+            <LiteralData>
+               <ows:DataType ows:reference="xs:double" />
+               <ows:AnyValue />
+            </LiteralData>
+         </wps:Input>
+         <wps:Output>
+            <ows:Identifier>out_table</ows:Identifier>
+            <ows:Metadata xlink:role="http://www.opengis.net/spec/wps/2.0/def/concept_Output" xlink:href="http://www.semanticweb.org/halilali/ontologies/2020/0/untitled-ontology-25#TabulateArea" />
+            <ows:Title>out table</ows:Title>
+            <ows:Abstract>Output table that will contain the summary of the area of each class in each zone.</ows:Abstract>
+            <wps:ComplexData>
+               <wps:Format MimeType="application/dbf" default="true" />
+            </wps:ComplexData>
+         </wps:Output>
+         <ows:Metadata xlink:role="http://choucas.ign.fr/spec/wps /2.0/def/process-profile/Non-functional_properties" xlink:href="./NonFunctional_Description/NFTabulateArea.xml" />
+      </wps:Process>
+   </wps:ProcessOffering>
+</wps:ProcessOfferings>
